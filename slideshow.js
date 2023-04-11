@@ -78,5 +78,6 @@ function showSlide(n) {try{
 
   clearInterval(slideInterval);
   slideInterval = setInterval(nextSlide, duration)
-}catch(e){if (e.message.includes("Cannot read properties of undefined (reading 'classList')")) null}
+// }catch(e){if (e.message.includes("Cannot read properties of undefined (reading 'classList')")) null}
+}finally{null}
 };
