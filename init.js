@@ -5,9 +5,9 @@ function setValues(){
     $("a.u-logo").attr("href","#")
     // Navigation Tabs links
     $("a.nav-home").attr("href","#")
-    $("a.nav-compare").attr("href","Comparison/Comparison.html")
-    $("a.nav-contact").attr("href","Contact/Contact.html")
-    $("a.nav-about").attr("href","About/About.html")
+    $("a.nav-compare").attr("href","Comparison/comparison.html")
+    $("a.nav-contact").attr("href","Contact/contact.html")
+    $("a.nav-about").attr("href","About/about.html")
     // slideshow images
     renderSlides(document.querySelector("div.u-carousel-inner"));
     renderSlideDots(document.querySelector("ol.u-carousel-indicators"));
