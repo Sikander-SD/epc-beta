@@ -88,11 +88,12 @@ function loadProduct(product_file,i) {
         </div>`
             // set values
             // device image
-            device.querySelector(".u-image-1").style.backgroundImage = `url(https://drive.google.com/uc?export=view&id=${deviceSpecs.img})`;
+//             device.querySelector(".u-image-1").style.backgroundImage = `url(https://drive.google.com/uc?export=view&id=${deviceSpecs.img})`;
+            device.querySelector(".u-image-1").style.backgroundImage = `url(${deviceSpecs.img})`;
             // open device on onclick event
             let x = ["u-image-1","u-text-1","u-text-2"];
             x.forEach((a)=>{
-                device.querySelector("."+a).onclick = ()=>{open(path_DEVICESPEC+"DeviceSpec.html?device="+deviceSpecs.name,"_blank")};
+                device.querySelector("."+a).onclick = ()=>{open(path_DEVICESPEC+"devicespec.html?device="+deviceSpecs.name,"_blank")};
             })
             
             // append devie into the section
