@@ -23,11 +23,12 @@ function renderSlides(container) {
     for (let i = 1; i <= Object.keys(slidelist).length; i++) {
         const slide = document.createElement('div');        
         const attrs = {"class":`skrollable u-carousel-item u-clearfix u-container-align-center u-image u-image-contain u-parallax u-section-2-${i} skrollable-between`,
-                       "style":`background-image: url("https://drive.google.com/uc?export=view&id=${path_SLIDES}slide${i}.png"); background-attachment: fixed; background-position: 50% -13.5897vh;`
+//                        "style":`background-image: url("https://drive.google.com/uc?export=view&id=${path_SLIDES}slide${i}.png"); background-attachment: fixed; background-position: 50% -13.5897vh;`
+                       "style":`background-image: url("${path_SLIDES}slide${i}.png"); background-attachment: fixed; background-position: 50% -13.5897vh;`
         }
         Object.keys(attrs).forEach(key => slide.setAttribute(key, attrs[key]));
 
-        slide.onclick = ()=>{open("DeviceSpec/DeviceSpec.html?device="+slidelist['slide'+i]+'"',"_blank")}
+        slide.onclick = ()=>{open("DeviceSpec/devicespec.html?device="+slidelist['slide'+i]+'"',"_blank")}
         if (i==1) slide.classList.add('u-active');        
         slide.innerHTML = `<div class="u-clearfix u-sheet u-sheet-1"></div>`;
         container.appendChild(slide);
