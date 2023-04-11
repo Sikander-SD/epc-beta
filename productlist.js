@@ -10,7 +10,7 @@ function renderProducts() {
   xhr.onreadystatechange = function() {
       if (this.readyState === 4){
           if (this.status === 200) {
-              namelist = this.responseText.replaceAll(" ","_").replace("/r","").split("\n");
+              namelist = this.responseText.replaceAll(" ","_").replace("/r","").split("\n").filter(i=>{if (i!="") return i});              
               console.log(namelist)
               namelist.forEach(loadProduct)
           } else {console.error(this.statusText)}
