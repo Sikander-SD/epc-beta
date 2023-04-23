@@ -1,5 +1,5 @@
 /* make visible when /Comparison.html page is ready  */
-.nav-compare,
+/* .nav-compare, */
 /* make visible when /Contact.html page is ready  */
 .nav-contact,
 /* make visible when /About.html page is ready  */
@@ -8,3 +8,4 @@
 form {
     visibility:hidden;
 }
+
