@@ -5,7 +5,7 @@ const device_NAME = urlParams.get("device").replaceAll(" ","_")
 let device_DATA,slidelist;
 
 // set page title
-document.querySelector("title").innerText = device_NAME;
+document.querySelector("title").innerText = urlParams.get("device");
 
 // get device from namelist of devices
 const xhr = new XMLHttpRequest();
