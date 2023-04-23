@@ -1,5 +1,5 @@
 // ----------------------------------------------- load slides
-let slidelist = []
+let slidelist = []//[GDrive image id,amazon-Link or device-name]
 const path_SLIDES = "AdSlides/";
 
 // get namelist of all slides    
@@ -20,25 +20,26 @@ xhr.send();
 // Dynamically create slides and add them to the slideshow container
 function renderSlides(container) {
     // set slides
-    for (let i = 1; i <= Object.keys(slidelist).length; i++) {
+    Object.keys(slidelist).forEach((sld,i)=>{i+=1
         const slide = document.createElement('div');        
         const attrs = {"class":`skrollable u-carousel-item u-clearfix u-container-align-center u-image u-image-contain u-parallax u-section-2-${i} skrollable-between`,
-//                        "style":`background-image: url("https://drive.google.com/uc?export=view&id=${path_SLIDES}slide${i}.png"); background-attachment: fixed; background-position: 50% -13.5897vh;`
-                       "style":`background-image: url("${path_SLIDES}slide${i}.png"); background-attachment: fixed; background-position: 50% -13.5897vh;`
+                       "style":`background-image: url("https://drive.google.com/uc?export=view&id=${slidelist[sld][0]}")`
+                       // "style":`background-image: url("${path_SLIDES}slide${i}.png");`
         }
         Object.keys(attrs).forEach(key => slide.setAttribute(key, attrs[key]));
 
-        slide.onclick = ()=>{open("DeviceSpec/devicespec.html?device="+slidelist['slide'+i]+'"',"_blank")}
+        if (slidelist[sld][1].startsWith("http")) slide.onclick = ()=>{open(slidelist[sld][1],"_blank")}
+        else slide.onclick = ()=>{open("DeviceSpec/devicespec.html?device="+slidelist[sld][1]+'"',"_blank")}
         if (i==1) slide.classList.add('u-active');        
         slide.innerHTML = `<div class="u-clearfix u-sheet u-sheet-1"></div>`;
         container.appendChild(slide);
-    }
-};
+    })
+};//END: renderSlides()
 
 // Dynamically create slide dots and add them to the slideshow
 function renderSlideDots(container) {
     // set slide dots
-    for (let i = 1; i <= Object.keys(slidelist).length; i++) {
+    Object.keys(slidelist).forEach((_,i)=>{i+=1
         const dot = document.createElement('li');        
         const attrs = {"class":"u-active-custom-color-4 u-palette-3-light-1 u-shape-circle",
                        "style":"width: 12px; height: 12px;",
@@ -49,8 +50,8 @@ function renderSlideDots(container) {
 
         if (i==1) dot.classList.add('u-active');        
         container.appendChild(dot);
-    }
-};
+    })
+};//END: renderSlideDots
 
 //----------------------------------------- slide functionality
 let slideIndex = 0, duration=6000;
@@ -78,6 +79,6 @@ function showSlide(n) {try{
 
   clearInterval(slideInterval);
   slideInterval = setInterval(nextSlide, duration)
-// }catch(e){if (e.message.includes("Cannot read properties of undefined (reading 'classList')")) null}
-}finally{null}
+}catch(e){console.error(e.message}
+// }finally{null}
 };
