@@ -4,6 +4,9 @@ const path_DEVICES = "../Devices/";
 const device_NAME = urlParams.get("device").replaceAll(" ","_")
 let device_DATA,slidelist;
 
+// set page title
+document.querySelector("title").innerText = device_NAME;
+
 // get device from namelist of devices
 const xhr = new XMLHttpRequest();
 xhr.open("GET", path_DEVICES + device_NAME + ".json",true);
