@@ -1,0 +1,137 @@
+/* .u-section-2
+
+.u-sheet-1
+.u-text-1  table title
+
+.u-table-header-1  table header row
+.u-table-footer-1  table footer row
+
+.u-table-cell-1    Compare Specifications
+.u-table-cell-2 -3 -4  header row cell
+.u-table-body-1     table all (data cells + left head cells)
+
+.u-btn-*    buy buttons
+*/
+.u-section-2 {
+  background-image: none;
+}
+.u-section-2 .u-sheet-1 {
+  min-height: 734px;
+}
+.u-section-2 .u-text-1 {
+  font-weight: 700;
+  width: 598px;
+  margin: 55px auto 0;
+}
+.u-section-2 .u-table-1 {
+  margin: 39px auto 55px 0;
+}
+.u-section-2 .u-table-header-1 {
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 400;
+  font-size: 1.25rem;
+  background-image: none;
+}
+.u-section-2 .u-table-cell-1 {
+  text-transform: uppercase;
+  font-weight: 700;
+  letter-spacing: 0;
+  font-size: 1.125rem;
+}
+.u-section-2 .u-table-cell-2,
+.u-section-2 .u-table-cell-3,
+.u-section-2 .u-table-cell-4 {
+  background-image: none;
+  font-weight: 700;
+  color:black;
+}
+.u-section-2 select{
+  background-color: inherit;
+  border: none;
+}
+.u-section-2 .u-table-body-1 {
+  line-height: 1.6;
+  font-size: 1.25rem;
+  text-transform: capitalize;
+  text-align:center;
+}
+.u-section-2 td[id$="-Image"]{
+    height: 240px;
+    background:white;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.u-section-2 .u-table-cell-5,
+.u-section-2 .u-table-cell-9{
+  font-weight: 700;
+}
+.u-section-2 td[id$="-Price"],
+.u-section-2 td[id$="-Price"]:before,
+.u-section-2 td[id$="-Price"] > .u-container-layout:before {
+    transition-property: fill, color, background-color, stroke-width, border-style, border-width, border-top-width, border-left-width, border-right-width, border-bottom-width, custom-border, borders, box-shadow, text-shadow, opacity, border-radius, stroke, border-color, font-size, font-style, font-weight, text-decoration, letter-spacing, transform, background-image, image-zoom, background-size, background-position
+}
+.u-section-2 td[id$="-Price"] {
+  font-size: large;
+  letter-spacing: 2px;
+  font-weight: 700;
+  text-shadow: 0px 0px 0px rgba(0,0,0,0);
+  text-align:center;
+  transition-duration: 0.25s;
+  box-shadow: 0px 0px 0px rgba(0,0,0,0);
+  transform: translateX(0px) translateY(0px) scale(1) rotate(0deg);
+  color: #11db0d !important;
+}
+.u-section-2 td[id$="-Price"]:hover,
+.u-section-2 td[id$="-Price"].hover {
+    box-shadow: 0px 0px 0px  rgba(0,0,0,0) !important;
+    transform: translateX(0px) translateY(0px) scale(1.1) rotate(0deg) !important;
+    text-shadow: 0px 0px 0px rgba(0,0,0,0) !important
+}
+.u-section-2 .u-container-layout:hover td[id$="-Price"],
+.u-container-layout.hover .u-section-2 td[id$="-Price"] {
+    transform: rotate(0deg) scale(1) translateX(0px) translateY(0px) !important
+}
+.u-section-2 .u-table-footer-1 {
+  font-size: 1rem;
+}
+.u-section-2 .u-btn-1,
+.u-section-2 .u-btn-2,
+.u-section-2 .u-btn-3 {
+  background-image: none;
+  border-style: none;
+  text-transform: uppercase;
+  font-size: 0.875rem;
+  letter-spacing: 1px;
+  font-weight: 700;
+  text-align:center;
+  width: 60%;
+  margin: 0 20%;
+  padding:5%;
+ 
+}
+@media (orientation: portrait) {
+ .u-section-2 .u-text-1{
+     margin-left:10%;
+ }
+ .u-section-2 .u-table-cell-1,
+ .u-section-2 .u-table-header-1,
+ .u-section-2 .u-table-footer-1,
+ .u-section-2 .u-table-body-1{
+    text-align:center;
+    font-size:small;
+ }
+ .u-section-2 [class^="u-btn"]{
+   font-size:80%;
+ }
+  .u-section-2 td[id$="-Price"]{
+    font-size:110%;
+  }
+  .u-section-2 .u-table-1{ 
+   margin-left:-20% !important;
+   min-width:150% !important;
+ }
+  
+  
+}
