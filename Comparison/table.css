@@ -14,6 +14,7 @@
 */
 .u-section-2 {
   background-image: none;
+ overflow:hidden;
 }
 .u-section-2 .u-sheet-1 {
   min-height: 734px;
@@ -31,7 +32,6 @@
   letter-spacing: 1px;
   font-weight: 400;
   font-size: 1.25rem;
-  background-image: none;
 }
 .u-section-2 .u-table-cell-1 {
   text-transform: uppercase;
@@ -42,7 +42,6 @@
 .u-section-2 .u-table-cell-2,
 .u-section-2 .u-table-cell-3,
 .u-section-2 .u-table-cell-4 {
-  background-image: none;
   font-weight: 700;
   color:black;
 }
@@ -113,25 +112,32 @@
 }
 @media (orientation: portrait) {
  .u-section-2 .u-text-1{
-     margin-left:10%;
+/*   border:solid; */
+  font-size:100%;
+  margin:5% auto;
+ }
+ .u-section-2 .u-table-1{
+  margin:auto;
  }
  .u-section-2 .u-table-cell-1,
  .u-section-2 .u-table-header-1,
  .u-section-2 .u-table-footer-1,
  .u-section-2 .u-table-body-1{
-    text-align:center;
-    font-size:small;
+    font-size:50%;
+ }
+ .u-section-2 .u-table-header-1{
+  font-size:55%
+ }
+ .u-section-2 #device1-Image,
+ .u-section-2 #device2-Image,
+ .u-section-2 #device3-Image{
+/*   border:solid red; */
+  height:15vh;
  }
  .u-section-2 [class^="u-btn"]{
    font-size:80%;
  }
   .u-section-2 td[id$="-Price"]{
     font-size:110%;
-  }
-  .u-section-2 .u-table-1{ 
-   margin-left:-20% !important;
-   min-width:150% !important;
- }
-  
-  
+  }  
 }
