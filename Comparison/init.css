@@ -1,10 +1,1 @@
-/* make visible when /Comparison.html page is ready  */
-/* .nav-compare, */
-/* make visible when /Contact.html page is ready  */
-.nav-contact,
-/* make visible when /About.html page is ready  */
-.nav-about,
-/* make visible when search functionality is ready  */
-form {
-    visibility:hidden;
-}
+
