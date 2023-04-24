@@ -1,11 +1,37 @@
-/* make visible when /Comparison.html page is ready  */
-/* .nav-compare, */
 /* make visible when /Contact.html page is ready  */
 .nav-contact,
 /* make visible when /About.html page is ready  */
 .nav-about,
 /* make visible when search functionality is ready  */
-form {
+form,
+#sec-8dde > div > div > a:nth-child(1),
+#sec-8dde > div > div > a:nth-child(2),
+#sec-8dde > div > div > a:nth-child(4),
+#sec-8dde > div > div > a:nth-child(6){
     visibility:hidden;
 }
 
+/* mobile */
+@media (orientation: portrait) {
+/*    funcatinalities are not ready  */
+    #sec-8dde > div > p.u-align-center.u-text.u-text-1,
+    #sec-8dde > div > p.u-align-center.u-text.u-text-2,
+    #sec-fbc0 > div > form,
+    #sec-8dde > div > div > a:nth-child(1),
+    #sec-8dde > div > div > a:nth-child(2),
+    #sec-8dde > div > div > a:nth-child(4),
+    #sec-8dde > div > div > a:nth-child(6)
+    {
+        display:none;
+    }
+}
+html * {
+/*     border:solid 1px; */
+    max-width:100% !important;
+}
+/* html{
+    border:solid 1px;
+    background-color:greenyellow;    
+}
+
+ */
