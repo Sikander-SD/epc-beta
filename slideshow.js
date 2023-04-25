@@ -80,5 +80,4 @@ function showSlide(n) {try{
   clearInterval(slideInterval);
   slideInterval = setInterval(nextSlide, duration)
 }catch(e){console.error(e.message)}
-// }finally{null}
 };

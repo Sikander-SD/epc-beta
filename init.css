@@ -7,12 +7,12 @@ form,
 #sec-8dde > div > div > a:nth-child(1),
 #sec-8dde > div > div > a:nth-child(2),
 #sec-8dde > div > div > a:nth-child(4),
-#sec-8dde > div > div > a:nth-child(6){
+#sec-8dde > div > div > a:nth-child(6)
+{
     visibility:hidden;
 }
-
-/* mobile */
-@media (orientation: portrait) {
+/* mobile-ratio 9:16 */
+@media only screen and (max-aspect-ratio: 9/16){
 /*    funcatinalities are not ready  */
     #sec-8dde > div > p.u-align-center.u-text.u-text-1,
     #sec-8dde > div > p.u-align-center.u-text.u-text-2,
@@ -24,14 +24,16 @@ form,
     {
         display:none;
     }
-}
-html * {
+ html * {
 /*     border:solid 1px; */
-    max-width:100% !important;
-}
-/* html{
+ }
+ html {
     border:solid 1px;
-    background-color:greenyellow;    
-}
+    background-color:greenyellow;
+ }
+    body{
+/*         background-color:red !important; */
+        min-height:100%;
+    }
 
- */
+}/*END: 9:16 */

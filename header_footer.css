@@ -1,7 +1,7 @@
 /* desktop */
 .u-header{
   background-image:none;
-  height:160px;
+  height: 153px;
 }
 .u-header .u-image-1 {
   width: 9%;
@@ -98,16 +98,15 @@
   height: 100%;
 }
 
-.u-footer .u-social-icons-1 {
+.u-footer .u-social-icons-1 { 
   height: 51px;
   min-height: 16px;
   width: 359px;
   min-width: 146px;
   white-space: nowrap;
-  position: absolute;
+  position:absolute;
   margin-top: -7%;
   margin-left: 70%;
-  
 }
 
 .u-footer .u-icon-1 {
@@ -159,44 +158,44 @@
   margin: 45px auto 23px;
 }
 
-/* mobile */
-@media (orientation: portrait) {
+/* mobile-ratio 9:16 */
+@media only screen and (max-aspect-ratio: 9/16){
 /*   HEADER  */
   .u-header{
-/*     border:solid 1px; */
     height:auto;
-    display:flex;
-    justify-content:center;
-  }  
-  .u-header .u-text-1,
-  .u-header .u-text-2,
-  .u-header .u-logo,
-  .u-header .u-logo-image-1{
-    display:none;
+  }
+  .u-header .u-sheet-1{
+    min-width:95%;
+  }
+  .u-header .u-text-1{
+/*     border:solid; */
+    font-size:5vw;
+    width:40vw;
+    margin-top:-8vw ;
+  }
+  .u-header .u-text-2{
+/*     display:none; */
   }
   .u-header .u-nav-1 {
 /*     border:solid 1px; */
-    font-size:80%;    
+    font-size:2vw;    
     margin:auto !important;
+    max-height:7vh;
  }
-  .u-header .u-nav-item{
+  .u-header .u-nav-item,
+  .u-header .u-nav-link{
 /*    border:solid 1px; */
-   min-width:7%;
- }
-  
-            /*   FOOTER  */
-  .u-footer,footer .u-sheet-1{
+   min-width:0;
+   max-height:7vh;
+ }  
+            /*   FOOTER  */  
+  .footer .u-sheet-1{
 /*     border:solid red 1px; */
-    height:auto;    
-    max-width:100%;
-    min-height:0 !important;
+    min-width:95% !important; 
   }
   .u-footer *{
 /*     border:solid #28b8b0 1px; */
   }
-  .u-footer .u-logo{
-    display:none;
-  }  
   .u-footer .u-social-url{
 /*     border:solid; */
     margin:auto !important;
@@ -204,25 +203,24 @@
   }
   .u-footer .u-social-icons-1{
 /*     border:solid #fff; */
-    margin: auto;
-    max-width:100%;
-    min-height:50%;
+    margin-left:65%; 
+    margin-top:-4.5vh;
+    height:auto;
   }  
   .u-footer [class*="u-icon-"]{
 /*     border:solid; */
     margin:auto;
-    width:20%;
+    width:40%; 
   }
   .u-footer .u-text-3{
 /*     border:solid #db545a; */
-    font-size:50%;
-    margin-left:0 !important;
-    margin-top:18% !important;
-    max-width:100%;
+    margin:auto !important;
   }
   
   
 }
+/* tablet */
+/* @media only screen and (orientation: portrait) {} */
 /*  */
 .u-offcanvas .u-sidenav { flex-basis: 250px !important; }
 .u-offcanvas:not(.u-menu-open-right) .u-sidenav { margin-left: -250px; }

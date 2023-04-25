@@ -48,7 +48,7 @@
     transform: rotate(0deg) scale(1) translateX(0px) translateY(0px) !important
 }
 .u-section-3 .u-sheet-1 {
-  min-height: 1042px;
+  min-height: 82vh;
 }
 .u-section-3 .u-layout-wrap-1 {
   margin-top: 15px;
@@ -85,19 +85,18 @@
 .u-section-3 .u-text-1 {
   margin: 0.5% auto auto;
   font-family: var(--text-font);
-  font-size:large;
   font-weight:700;
 }
 .u-section-3 .u-layout-cell-4 {
   height: 120px;
 }
 .u-section-3 .u-container-layout-4 {
-  padding: 0 10px 36px;
+  padding:0 1% !important;
 }
 .u-section-3 .u-text-2 {
   margin: 0 0.5% 0 0.5%;
   letter-spacing: 0.5px;
-  font-size:small; 
+  font-size:80% !important; 
 }
 .u-section-3 .u-layout-cell-5 {
   height: 70px;
@@ -113,7 +112,7 @@
   box-shadow: 2px 0px 0px 0px rgba(0,0,0,0);
   text-shadow: 0px 0px 0px rgba(0,0,0,0);
   background-image: linear-gradient(#f1c50e, #d58700);
-  margin: 2px auto 0 0;
+  margin: 2% 15%;
 }
 .u-section-3 .u-icon-1 {
   margin-right: 5px;
@@ -150,22 +149,21 @@
   font-size: small;  
 }
 
-@media (orientation: portrait) {
-  .u-right-cell{
-/*     border:solid 1px; */
-    margin-bottom:10%;
-  }
- .u-section-3 .u-layout-wrap-2 {
-/*     border:solid 1px; */
-  }
-  .u-container-layout-4{
+/* mobile-ratio 9:16 */
+@media only screen and (max-aspect-ratio: 9/16){
+  .u-section-3 .u-container-layout-4{
 /*     border:solid; */
     overflow:overlay;
     padding:1% 0 !important;
   }
-  .u-text-2{    
+  .u-section-3 .u-text-1{
+    font-size:2vw !important;
+    margin-top:1%;
+  }
+  .u-section-3 .u-text-2{    
 /*     border:solid red; */
-    font-size:70% !important;
+    font-size:90% !important;
+    padding:0 2%;
   }
   .u-container-layout-5{
 /*     border:solid; */
