@@ -12,13 +12,13 @@
 
 
 */
-
 .u-section-3 {
   background-image: linear-gradient(0deg, rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url("https://images02.nicepagecdn.com/c461c07a441a5d220e8feb1a/685e3640856156acb6699a27/yt-min.jpg");
   background-position: 50% 50%;
 }
 .u-section-3 .u-sheet-1 {
   min-height: 728px;
+  overflow:auto;
 }
 .u-section-3 .u-text-1 {
   font-weight: 700;
@@ -30,11 +30,14 @@
 }
 .u-section-3 .u-table-entity-1 {
   min-height: 100px;
+ margin:0 5vw !important;
 }
+
 .u-section-3 .u-table-body-1 {
   line-height: 1.6;
   font-size: 1.125rem;
   text-align:left;
+  font-weight:600
 }
 .u-section-3 .u-first-column{
   font-weight: 700;
@@ -88,29 +91,16 @@
   letter-spacing: 1px;
   font-weight: 700;
   text-align:center;
-  width: 40%;
-  padding:5%;
+  width: 30%;
+  padding:2%;
 }
-@media (orientation: portrait) {
+/* mobile-ratio 9:16 */
+@media only screen and (max-aspect-ratio: 9/16){
   .u-section-3 .u-text-1{
-    font-size:10vw !important;
-    margin:3% auto !important;
+    margin:3% auto;
   }
- .u-section-3 .u-table-cell{
-    font-size:50%; 
- }
- .u-section-3 .u-table-cell-1,
- .u-section-3 .u-table-cell-2,
- .u-section-3 .u-table-cell-3,
- .u-section-3 .u-table-cell-4{
-/*   border:solid; */
-  padding:0;
- }
-.u-section-3 .u-cell-price {
-  font-size:80%;
- }
- .u-section-3 .u-btn{
-  font-size:100%;
-  width:70%;
- }
+  .u-section-3 .u-btn{
+   width:auto;
+  }
+ 
 }
