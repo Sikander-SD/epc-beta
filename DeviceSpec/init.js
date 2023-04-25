@@ -51,5 +51,5 @@ function setValues(){try{
     //    
 
         
-}catch(e){if (e.message.includes("Cannot read properties of undefined (reading 'forEach')")) location.reload()}
+}catch(e){console.log(e.message)}
 };
