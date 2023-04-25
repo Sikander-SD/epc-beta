@@ -171,7 +171,7 @@
 /*     border:solid; */
     font-size:5vw;
     width:40vw;
-    margin-top:-8vw ;
+   /* margin-top:-8vw ;*/
   }
   .u-header .u-text-2{
 /*     display:none; */
@@ -185,7 +185,7 @@
   .u-header .u-nav-item,
   .u-header .u-nav-link{
 /*    border:solid 1px; */
-   min-width:0;
+   width:10vw;
    max-height:7vh;
  }  
             /*   FOOTER  */  
