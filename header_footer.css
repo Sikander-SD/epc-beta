@@ -21,7 +21,7 @@
   font-size: 3rem;
   font-weight: 700;
   width: 353px;
-  /*margin: -90px auto 0;*/
+  margin: -90px auto 0;
 }
 
 .u-header .u-text-2 {
@@ -159,7 +159,7 @@
 }
 
 /* mobile-ratio 9:16 */
-@media only screen and (max-aspect-ratio: 9/16){
+@media only screen and (min-aspect-ratio: 9/16) and (max-aspect-ratio: 9/16){
 /*   HEADER  */
   .u-header{
     height:auto;
