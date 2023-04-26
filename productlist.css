@@ -149,37 +149,270 @@
   font-size: small;  
 }
 
-/* mobile-ratio 9:16 */
-@media only screen and (max-aspect-ratio: 9/16){
+/* mobile-small****************************************/
+@media only screen and (width <= 320px){
+  .u-section-3 .u-sheet-1{
+/*     border:solid; */
+    max-width: 100%;
+  }
+  .u-section-3 .u-layout-wrap-1{
+/*     border:solid; */
+    height:470px;
+  }
+ .u-section-3 .u-layout-wrap-2{
+/*     border:solid; */
+ }
+  .u-section-3 .u-container-layout-1{
+/*     border:solid; */
+  }
+  .u-section-3 .u-container-layout-2{
+/*     border:solid; */
+    height:270px
+  }
+  .u-section-3 .u-container-layout-3{
+/*     border:solid;     */
+  }
+  .u-section-3 .u-text-1,
+  .u-section-3 .u-layout-cell-3{
+/*     border:solid; */
+  }
   .u-section-3 .u-container-layout-4{
 /*     border:solid; */
     overflow:overlay;
-    padding:1% 0 !important;
   }
-  .u-section-3 .u-text-1{
-    font-size:2vw !important;
-    margin-top:1%;
-  }
-  .u-section-3 .u-text-2{    
-/*     border:solid red; */
-    font-size:90% !important;
-    padding:0 2%;
-  }
-  .u-container-layout-5{
+  .u-section-3 .u-text-2,
+  .u-section-3 .u-layout-cell-4{    
 /*     border:solid; */
-    padding:0 !important;
-    margin:auto;
-    display:flex;
-/*     margin-top:10%; */
   }
-  .u-text-3{
-    margin:5%!important;
+  .u-section-3 .u-container-layout-5,
+  .u-section-3 .u-layout-cell-5{
+/*     border:solid; */
+    bottom:-7px
+  }
+  .u-section-3 .u-btn-1{
+    margin-left:-3rem;
+    top:2rem
+  }
+.u-section-3 .u-icon-1 {
+   margin:0;
+   font-size:15px;
+}  
+  .u-section-3 .u-text-3{
+    margin-left:-1rem;
+    bottom:2rem;
+    font-size:large;
   }  
-.u-container-layout-6{
+  .u-section-3 .u-container-layout-6,
+  .u-section-3 .u-layout-cell-6{
 /*     border:solid; */
-    padding:0 !important;
+    height:100%;
+    padding:0;
+    bottom:15px;
+  } 
+  .u-text-4,.u-text-5{
+/*     border:solid;     */
+    margin:auto !important;
+    margin-right:2% !important;
+  }
+}/*END: mobile-small */
+/* mobile-medium*/
+@media only screen and (320px < width <=375px){
+  .u-section-3 .u-sheet-1{
+/*     border:solid blue; */
+    min-width: 100%;
+  }
+  .u-section-3 .u-layout-wrap-1{
+/*     border:solid blue; */
+/*     margin:3%; */
+  }
+ .u-section-3 .u-layout-wrap-2{
+/*     border:solid blue; */
+    height:100%;
+ }
+  .u-section-3 .u-container-layout-1{
+/*     border:solid blue; */
+  }
+  .u-section-3 .u-container-layout-2{
+/*     border:solid blue; */
+  }
+  .u-section-3 .u-container-layout-3{
+/*     border:solid blue;     */
+  }
+  .u-section-3 .u-text-1,
+  .u-section-3 .u-layout-cell-3{
+/*     border:solid; */
+  }
+  .u-section-3 .u-container-layout-4{
+/*     border:solid; */
+    overflow:overlay;
+  }
+  .u-section-3 .u-text-2,
+  .u-section-3 .u-layout-cell-4{    
+/*     border:solid; */
+    height:100%;
+  }
+  .u-section-3 .u-container-layout-5,
+  .u-section-3 .u-layout-cell-5{
+/*     border:solid; */
+    bottom:-17px
+  }
+  .u-section-3 .u-btn-1{
+    margin-left:-2rem;
+    top:1rem
+  }
+.u-section-3 .u-icon-1 {
+   margin:0;
+   font-size:15px;
+}  
+  .u-section-3 .u-text-3{
+    margin-left:0.1rem;
+    bottom:2.5rem;
+    font-size:large;
+  }  
+  .u-section-3 .u-container-layout-6,
+  .u-section-3 .u-layout-cell-6{
+/*     border:solid; */
+    height:100%;
+    padding:0;
+    bottom:1rem;
+  } 
+  .u-text-4,.u-text-5{
+/*     border:solid;     */
+    margin:auto !important;
+    margin-right:10% !important;
+  }
+}/*END: mobile-medium */
+/* mobile-large*/
+@media only screen and (375px < width <= 528px){
+  .u-section-3 .u-sheet-1{
+/*     border:solid green; */
+    min-width: 100%;
+  }
+  .u-section-3 .u-layout-wrap-1{
+/*     border:solid green; */
+    margin:3%;
+  }
+ .u-section-3 .u-layout-wrap-2{
+/*     border:solid green; */
+    height:100%;
+ }
+  .u-section-3 .u-container-layout-1{
+/*     border:solid green; */
+  }
+  .u-section-3 .u-container-layout-2{
+/*     border:solid green; */
+  }
+  .u-section-3 .u-container-layout-3{
+/*     border:solid green;     */
+  }
+  .u-section-3 .u-text-1,
+  .u-section-3 .u-layout-cell-3{
+/*     border:solid; */
+  }
+  .u-section-3 .u-container-layout-4{
+/*     border:solid; */
+    overflow:overlay;
+  }
+  .u-section-3 .u-text-2,
+  .u-section-3 .u-layout-cell-4{    
+/*     border:solid red; */
+    height:100%;
+  }
+  .u-section-3 .u-container-layout-5,
+  .u-section-3 .u-layout-cell-5{
+/*     border:solid; */
+    bottom:-17px
+  }
+  .u-section-3 .u-btn-1{
+    margin-left:-1rem;
+    top:2rem
+  }
+.u-section-3 .u-icon-1 {
+   margin:0;
+   font-size:20px;
+}  
+  .u-section-3 .u-text-3{
+    margin-left:1rem;
+    bottom:2rem;
+    font-size:large;
+  }  
+  .u-section-3 .u-container-layout-6,
+  .u-section-3 .u-layout-cell-6{
+/*     border:solid; */
+    height:100%;
+    padding:0;    
+  } 
+  .u-text-4,.u-text-5{
+/*     border:solid;     */
+    margin:auto !important;
+    margin-right:10% !important;
+  }
+}/*END: mobile-large */
+/* tablet*/ 
+@media only screen and (528px < width <= 768px){
+  .u-section-3 .u-sheet-1{
+/*     border:solid red; */
+    min-width: 100%;
+  }
+  .u-section-3 .u-layout-wrap-1{
+/*     border:solid red; */
+    margin:3%;
+  }
+ .u-section-3 .u-layout-wrap-2{
+/*     border:solid red; */
+    height:100%;
+ }
+  .u-section-3 .u-container-layout-1{
+/*     border:solid red;     */
+  }
+  .u-section-3 .u-container-layout-2{
+/*     border:solid red;     */
+  }
+  .u-section-3 .u-container-layout-3{
+/*     border:solid red;     */
+  }
+  .u-section-3 .u-text-1,
+  .u-section-3 .u-layout-cell-3{
+/*     border:solid; */
+  }
+  .u-section-3 .u-container-layout-4{
+/*     border:solid; */
+/*     overflow:overlay; */
+  }
+  .u-section-3 .u-text-2,
+  .u-section-3 .u-layout-cell-4{    
+/*     border:solid red; */
+    padding:0 2%;
+    height:100%;
+  }
+  .u-section-3 .u-container-layout-5,
+  .u-section-3 .u-layout-cell-5{
+/*     border:solid; */
+    height:auto;
+    padding:0;
     display:flex;
-    max-height:40%;
+    bottom:-7px
+  }
+  .u-section-3 .u-btn-1{
+    margin-left:3%;
+    height:0px
+  }
+.u-section-3 .u-icon-1 {
+   margin:0;
+   font-size:20px;
+   vertical-align: -4px;
+}  
+  .u-section-3 .u-text-3{
+    margin:5%;
+    font-size:large;
+  }  
+  .u-section-3 .u-container-layout-6,
+  .u-section-3 .u-layout-cell-6{
+/*     border:solid; */
+    padding:0;
+    bottom:-10px;
+    display:flex;
+    height:100%;    
   } 
   .u-text-4,.u-text-5{
 /*     border:solid;     */

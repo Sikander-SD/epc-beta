@@ -34,10 +34,4 @@
   background-attachment: fixed;
 }
 
-/* mobile-ratio 9:16 */
-@media only screen and (max-aspect-ratio: 9/16){
-  .u-block-67a6-1{ /* slideshow container */
-    display:none;
-  }  
-}
 
