@@ -150,7 +150,7 @@
 /*   HEADER  */
   .u-header{    
     border:solid;
-    height:auto;
+    height:100%;
   }
   .u-header .u-sheet-1{
 /*     border:solid; */
@@ -163,11 +163,11 @@
 /*     border:solid; */
     font-size:5vw;
     width:40vw;
-    margin-top:-5vh;
+    margin-top:-9%;
   }
   .u-header .u-text-2{
 /*     border:solid; */
-    font-size:3vw;
+    font-size:2vw;
   }
   .u-header .u-nav-1 {
 /*     border:solid 1px; */
@@ -177,7 +177,7 @@
   .u-header .u-nav-link{
 /*    border:solid 1px; */
    min-width:0;
-   max-height:7vh;
+   max-height:7%;
  }  
                    /*   FOOTER  *****/  
   .u-footer *{
@@ -224,7 +224,7 @@
 /*     border:solid blue; */
     font-size:5vw;
     width:40vw;
-    margin-top:-6vh;
+    margin-top:-8%;
   }
   .u-header .u-text-2{
 /*     border:solid blue; */
@@ -284,16 +284,16 @@
 /*     border:solid green; */
     font-size:5vw;
     width:40vw;
-    margin-top:-8vh;
+    margin-top:-8%;
   }
   .u-header .u-text-2{
 /*     border:solid green; */
-    font-size:2vh;
+    font-size:2vw;
     margin-top:2%;
   }
   .u-header .u-nav-1 {
 /*     border:solid 1px green; */
-    font-size:2vh;    
+    font-size:70%;    
  }
   .u-header .u-nav-item,
   .u-header .u-nav-link{
@@ -342,7 +342,7 @@
 }  
   .u-header .u-text-1{
 /*     border:solid red; */
-    margin-top:-5vh ;
+    margin-top:-7% ;
     font-size:40px
   }
   .u-header .u-text-2{
@@ -352,7 +352,7 @@
   }
   .u-header .u-nav-1 {
 /*     border:solid 1px red; */
-    font-size:2.5vh;    
+    font-size:100%;    
  }
   .u-header .u-nav-item,
   .u-header .u-nav-link{
