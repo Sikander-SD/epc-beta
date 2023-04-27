@@ -284,11 +284,13 @@ desktop <= 1440px
     width:30px
   }
   .u-footer .u-social-icons-1{
-/*   border:solid blue; */
+  border:solid blue; 
     width:15vw;
     height:6vw;
     min-width:80px;
     min-height:30px;
+    top:6vw;
+    right:5px;
   }  
   .u-footer .u-text-3{
 /*   border:solid blue; */

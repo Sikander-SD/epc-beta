@@ -1,6 +1,7 @@
 // set href and src attriubtes
 function setValues(){
-     alert(screen.width+" "+screen.height);
+    //optional: device browser screen tester
+    document.body.append("width:"+screen.width+" x height:"+screen.height+" | availWidth:"+screen.availWidth+" x availHeight:"+screen.availHeight);
     // webiste logo link
     $(".u-logo-image").attr("src","logo/logo.jpg")    
     $("a.u-logo").attr("href","#")
