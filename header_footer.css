@@ -1,58 +1,51 @@
-/* screens
-phone   <= 480px
-tablet  <= 991px
-laptop  <= 1024px
-desktop <= 1440px
-*/
 /* standard values to all ***********************************/
 /*--------------- Header ---------------*/
-.u-header{
-  width:100%;
-}
-.u-header .u-logo-image-1 {
-/*   border:solid; */
-  width: 6vw;
-}
-.u-header .u-image-1 {
-/*   border:solid; */
-  margin: 2vw auto 0 0;box-shadow: 2px 0px 0px 0px rgba(0,0,0,0);
-  transition-duration: 0.5s;
-  text-shadow: 0px 0px 0px rgba(0,0,0,0);
-  transform: translateX(0px) translateY(-2vw) scale(1) rotate(0deg);
-}
 .u-header .u-image-1, .u-header .u-image-1:before, .u-header .u-image-1 > .u-container-layout:before {
     transition-property: fill, color, background-color, stroke-width, border-style, border-width, border-top-width, border-left-width, border-right-width, border-bottom-width, custom-border, borders, box-shadow, text-shadow, opacity, border-radius, stroke, border-color, font-size, font-style, font-weight, text-decoration, letter-spacing, transform, background-image, image-zoom, background-size, background-position
 }
+.u-header .u-image-1.hover,
 .u-header .u-image-1:hover {
     box-shadow: 2px 2px 8px 0px rgba(128,128,128,1) !important;
-    transform: scale(1) translateY(px) !important;
-    text-shadow: 0px 0px 0px rgba(0,0,0,0) !important
-}
+    transform: scale(1) translateY(px) !important;    
+} 
 .u-header .u-image-1 {
-    border-color: transparent !important
+  box-shadow: 2px 0px 0px 0px rgba(0,0,0,0);
+  transition-duration: 0.5s;
+  text-shadow: 0px 0px 0px rgba(0,0,0,0);
+  border-color: transparent !important;
+  transform: translateX(0px) translateY(0) scale(1) rotate(0deg);
 }
-.u-header .u-image-1.hover {
-    box-shadow: 2px 2px 8px 0px rgba(128,128,128,1) !important;
-    transform: scale(1) translateY(px) !important;
-    text-shadow: 0px 0px 0px rgba(0,0,0,0) !important
-}
-.u-header .u-image-1 {
-    border-color: transparent !important
-}
-.u-header .u-container-layout:hover .u-image-1 {
-    transform: rotate(0deg) scale(1) translateX(0px) translateY(0px) !important
-}
+.u-header .u-container-layout:hover .u-image-1,
 .u-container-layout.hover .u-header .u-image-1 {
-    transform: rotate(0deg) scale(1) translateX(0px) translateY(0px) !important
+   transform: rotate(0deg) scale(1) translateX(0px) translateY(0px) !important
+}
+.u-header *{
+/*   border:solid red; */
+}
+.u-header{
+  border:solid red;
+  width:100%;
+}
+.u-header .u-sheet-1{}
+.u-header .header-row-1{
+/*   border:solid red;   */
+  display:flex;
+  justify-content:left;  
+}
+.u-header .u-logo-image-1 {
+/*   border:solid red; */
+  width: 6vw;
 }
 .u-header .u-text-1 {
+/*   border:solid red; */
   font-weight: 700;
   font-size: 3vw;  
   margin:auto;
-  margin-top: -7vw;  
+  left:-2vw;
 }
 .u-header .u-text-2 {
-  margin:1vw auto;
+  margin:0 auto;
+  margin-bottom:4px;
 }
 .u-header .u-nav-1 {
   font-weight: 700;
@@ -60,20 +53,30 @@ desktop <= 1440px
   text-shadow: 2px 2px 8px rgba(0,0,0,0.4);
 }
 .u-header .u-nav-item{
-/*   border:solid; */
+/*   border:solid red; */
   min-width:15vw;
   font-size:1.3vw;
 }
 .u-header .u-search-1 {
   background-image: linear-gradient(to right, #adf6f2, white);
+  min-height: 48px;
   margin: -4.7vw 0 0 auto;
+}
+.u-header .u-search-icon-1 {
+  width: 25px;
+  height: 27px;
+  padding: 4px;
 }
 /*--------------- Footer ---------------*/
 .u-footer{
+  border:solid red;
   width:100vw;
   height:10vw;
 }
-.u-footer .u-sheet-1 {
+.u-footer *{
+/*   border:solid red; */
+}
+u-footer .u-sheet-1 {
   height: 10vw;
 }
 .u-footer .u-image-1 {
@@ -91,6 +94,9 @@ desktop <= 1440px
   position:absolute;
   margin-top: -7vw;
   margin-left: 68vw;
+  width:100px;
+  height:40px;
+  top:8vw
 }
 .u-footer .u-icon-1 {
   color: rgb(59, 89, 152) !important;
@@ -121,7 +127,6 @@ desktop <= 1440px
 .u-footer .u-btn-1,
 .u-footer .u-btn-2{
   font-size: 1.125rem;
-/*   padding: 0; */
 }
 .u-footer .u-text-3 {
   width: 100%;
@@ -129,68 +134,53 @@ desktop <= 1440px
   font-size:1.2vw;  
 }
 /* END: standard to all screens */
-/*################ desktop screens ##################*/
-@media only screen and (991px < width){
+/*################ phone screens ##################*/
+@media only screen and (width <= 800px){
 /*--------------- Header ---------------*/
-.u-header{
-  border:solid red;
-}
 .u-header *{
-/*   border:solid red; */
+/*   border:solid green; */
 }
-.u-header .u-search-1 {
-  min-height: 48px;
-}
-.u-header .u-search-icon-1 {
-  width: 25px;
-  height: 27px;
-  padding: 4px;
-}
-/*--------------- Footer ---------------*/
-.u-footer{
-  border:solid red;  
-}
-.u-footer *{
-/*   border:solid red; */
-}
-.u-footer .u-social-icons-1 {
-  width:100px;
-  height:40px;
-  top:8vw  
-}
-}/*END: desktop screens*/
-/*################ tablet screens ##################*/
-@media only screen and (480px < width <= 991px){
-/*--------------- Header ---------------*/
 .u-header{
   border:solid green;
 }
-.u-header *{
-/*   border:solid green; */
+.u-header .u-sheet-1{
+  min-width:100vw;
+  max-width:100vw;
 }
-  .u-header .u-sheet-1{
-/*   border:solid green; */
-    min-width:100%;
-  }
+.u-header .header-row-1{
+/*   border:solid green;  */
+  max-width:100vw
+}
 .u-header .u-logo-image-1 {
 /*   border:solid green; */
-}  
-  .u-header .u-text-1{
+  width: 10vw;
+  margin:1vw 1vw auto;
+}
+.u-header .u-text-1 {
 /*   border:solid green; */
-    font-size:4vw;
-  }
-  .u-header .u-text-2{
+  font-size: 5vw;  
+  left:-8vw;
+}
+.u-header .u-text-2{
 /*   border:solid green; */
-    font-size:1.7vw;
+  max-width:100vw;
+  font-size:2vw;
+  margin:0;
+}
+  .u-header .u-nav-container{
+/*   border:solid green; */
+    max-width:100vw;    
   }
   .u-header .u-nav-1 {
 /*   border:solid green; */
  }
-  .u-header .u-nav-item,
-  .u-header .u-nav-link{
+  .u-header .u-nav-item{
 /*   border:solid green; */
-    font-size:1.5vw;
- }  
+    font-size:2vw;
+ }
+  .u-header .u-nav-link{
+    padding:2vw 6vw !important;
+  }
 /*--------------- Footer ---------------*/
 .u-footer{
   border:solid green; 
@@ -203,9 +193,11 @@ desktop <= 1440px
   .u-footer .u-sheet-1{
 /*   border:solid green; */
     min-width:100%;
+  max-width:100vw;
   }
   .u-footer .u-logo {
 /*   border:solid green; */
+    min-width:30px
   }
   .u-footer .u-social-icons-1{
 /*   border:solid green; */
@@ -213,91 +205,15 @@ desktop <= 1440px
     height:6vw;
     min-width:80px;
     min-height:30px;
-    top:80%
   }  
   .u-footer .u-text-3{
 /*   border:solid green; */
+    max-width:100vw;    
     font-size:10px;
+    margin:0;
   }
-}/*END: tablet screens*/
-/*################ phone screens ##################*/
-@media only screen and (width <= 480px){
-/*--------------- Header ---------------*/
-.u-header{
-/*   border:solid blue; */
-  height:70px;
-  width:100% !important;
-}
-.u-header *{
-/*   border:solid blue; */
-}
-  .u-header .u-sheet-1{
-  border:solid blue;
-    width:100% !important;
-    min-height:100%;
-/*     height:100 */
-  }
-.u-header .u-logo-image-1 {
-/*   border:solid blue; */
-  display:none !important;
-}
-  .u-header .u-text-1{
-/*   border:solid blue; */
-    font-size:4vw;
-    top:7vw;
-    left:-35vw;
-  }
-  .u-header .u-text-2{
-/*   border:solid blue; */
-    font-size:1.7vw;
-    left:33vw;  
-    top:2vw;
-    position:absolute;
-  }
-  .u-header .u-nav-1 {
-/*   border:solid blue; */
-    top:-34px;   
-    right:20vw;
-    position:absolute
- }
-  .u-header .u-nav-item,
-  .u-header .u-nav-link{
-/*   border:solid blue; */
-    font-size:2vw;
- }  
-/*--------------- Footer ---------------*/
-.u-footer{
-/*   border:solid blue; */
-  min-height:80px;
-  height:auto;
-}
-.u-footer *{
-/*   border:solid blue; */
-}
-.u-footer .u-sheet-1{
-  border:solid blue;
-  width:100% !important;
-  height:auto;
-}
-  .u-footer .u-logo {
-/*   border:solid blue; */
-    width:30px
-  }
-  .u-footer .u-social-icons-1{
-  border:solid blue; 
-    width:15vw;
-    height:6vw;
-    min-width:80px;
-    min-height:30px;
-    top:6vw;
-    right:5px;
-  }  
-  .u-footer .u-text-3{
-/*   border:solid blue; */
-    font-size:10px;
-    bottom:-15px;
-  }
-}/*END: phone screens */
+}/*END: phone screens*/
+
 /*  */
 .u-offcanvas .u-sidenav { flex-basis: 250px !important; }
 .u-offcanvas:not(.u-menu-open-right) .u-sidenav { margin-left: -250px; }
