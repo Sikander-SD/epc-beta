@@ -8,15 +8,15 @@
 {display:none;}
 
 /* mobile-small*/
-@media only screen and (max-width:768px){
+@media only screen and (width <= 768px){
  .u-block-67a6-1{ /* slideshow container */
-    display:none;
+/*     display:none; */
   }  
  html * {
 /*     border:solid 1px; */
  }
  html {
-    border:solid 1px;
+/*     border:solid 1px; */
     background-color:greenyellow;
  }
     body{
@@ -24,4 +24,4 @@
         min-height:100%;
     }
 
-}/*END: 9:16 */
+}
