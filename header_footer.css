@@ -1,6 +1,6 @@
 /* screens
-phone   <= 425px
-tablet  <= 768px
+phone   <= 480px
+tablet  <= 991px
 laptop  <= 1024px
 desktop <= 1440px
 */
@@ -130,7 +130,7 @@ desktop <= 1440px
 }
 /* END: standard to all screens */
 /*################ desktop screens ##################*/
-@media only screen and (768px < width){
+@media only screen and (991px < width){
 /*--------------- Header ---------------*/
 .u-header{
   border:solid red;
@@ -160,7 +160,7 @@ desktop <= 1440px
 }
 }/*END: desktop screens*/
 /*################ tablet screens ##################*/
-@media only screen and (425px < width <= 768px){
+@media only screen and (480px < width <= 991px){
 /*--------------- Header ---------------*/
 .u-header{
   border:solid green;
@@ -221,7 +221,7 @@ desktop <= 1440px
   }
 }/*END: tablet screens*/
 /*################ phone screens ##################*/
-@media only screen and (width <= 425px){
+@media only screen and (width <= 480px){
 /*--------------- Header ---------------*/
 .u-header{
 /*   border:solid blue; */

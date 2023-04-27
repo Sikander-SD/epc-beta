@@ -8,7 +8,7 @@
 {display:none;}
 
 /* mobile-small*/
-@media only screen and (width <= 768px){
+@media only screen and (width <= 991px){
  .u-block-67a6-1{ /* slideshow container */
 /*     display:none; */
   }  
