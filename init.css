@@ -7,21 +7,21 @@
 #sec-8dde > div > div > a:nth-child(6)
 {display:none;}
 
-/* mobile-small*/
-@media only screen and (width <= 991px){
+/* phone screens */
+@media only screen and (width <= 800px){
  .u-block-67a6-1{ /* slideshow container */
-/*     display:none; */
+    display:none;
   }  
- html * {
+html * {
 /*     border:solid 1px; */
  }
- html {
+html {
 /*     border:solid 1px; */
     background-color:greenyellow;
- }
-    body{
+}
+body{
 /*         background-color:red !important; */
-        min-height:100%;
-    }
+   min-height:100%;
+}
 
 }

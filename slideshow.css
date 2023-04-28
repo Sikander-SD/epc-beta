@@ -28,8 +28,7 @@
   box-shadow: 5px 5px 20px 0 rgba(0,0,0,0.4);
   padding: 8px;
 }
-
-[class*="u-section-2-"] .u-sheet-1 {
+[class*="u-section-2-"] .u-sheet-1 { /* slides */
   height: 500px;
   background-attachment: fixed;
 }
