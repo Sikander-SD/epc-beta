@@ -76,12 +76,15 @@
 .u-footer *{
 /*   border:solid red; */
 }
-u-footer .u-sheet-1 {
-  height: 10vw;
+.u-footer .u-sheet-1 {
+/*   border:solid red; */
+  height: 10vw; 
+  min-width:100%;  
 }
 .u-footer .u-image-1 {
   width: 7vw;
   margin: 0.8vw;
+  left:5vw;
 }
 .u-footer .u-logo-image-1 {
   width: 100%;
@@ -166,6 +169,7 @@ u-footer .u-sheet-1 {
   max-width:100vw;
   font-size:2vw;
   margin:0;
+  bottom:7px
 }
   .u-header .u-nav-container{
 /*   border:solid green; */
@@ -176,7 +180,7 @@ u-footer .u-sheet-1 {
  }
   .u-header .u-nav-item{
 /*   border:solid green; */
-    font-size:2vw;
+    font-size:2.4vw;
  }
   .u-header .u-nav-link{
     padding:2vw 6vw !important;
