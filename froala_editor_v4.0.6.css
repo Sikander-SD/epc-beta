@@ -3073,7 +3073,7 @@ html {
 }
 body {
   height: auto;
-  min-height: 100%;
+  /* min-height: 100%; */
 }
 body,
 aside,
@@ -7267,7 +7267,7 @@ section.u-image:not(.u-hover-box),
 .u-group-elements,
 .u-group-elements > *,
 .u-container-layout > * {
-  position: relative;
+  /* position: relative; */
 }
 .u-inner-container-layout {
   white-space: normal;
@@ -17430,6 +17430,7 @@ div.u-video,
 }
 html {
   font-size: 16px;
+  /* background: aliceblue; */
 }
 .u-body {
   font-size: 1rem;
@@ -39759,7 +39760,7 @@ li.active > a.u-button-style.u-text-body-alt-color,
 li.active > a.u-button-style.u-text-body-alt-color[class*="u-border-"],
 a.u-button-style.u-text-body-alt-color,
 a.u-button-style.u-text-body-alt-color[class*="u-border-"] {
-  color: var(--body-alt-color) !important;
+  /* color: var(--body-alt-color) !important; */
 }
 a.u-button-style.u-text-body-alt-color:hover,
 a.u-button-style.u-text-body-alt-color[class*="u-border-"]:hover,

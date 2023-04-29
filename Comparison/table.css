@@ -13,98 +13,83 @@
 
 .u-btn-*    buy buttons
 */
+/* standard values to all ***********************************/
 .u-section-2 {
- overflow:hidden;
  margin-top:2%;
 }
+.u-section-2 .u-sheet-1 *{
+/*  border:solid red; */
+}
 .u-section-2 .u-sheet-1 {
-  min-height: 734px;
-  margin:auto 1%;
+/*  border:solid red; */
+ width:100% !important; 
 }
 .u-section-2 .u-text-1 {
+/*  border:solid red; */
   font-weight: 700;
-  width: 598px;
-  margin:auto 33%;
+ font-size:max(5vw,20px);
+ margin:1vw 0;
 }
 .u-section-2 .u-table-1 {
-  margin: 39px;
-  min-width:97vw;
-  overflow:auto;
+/*  border:solid red; */
+  margin:2vw 0;
+  text-transform: capitalize;
 }
-.u-section-2 .u-table-header-1 {
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  font-weight: 400;
-  font-size: 1.25rem;
-}
-
-.u-section-2 .u-table-cell-1,
-.u-section-2 .u-first-column{
-  font-weight: 700;
-  letter-spacing: 1px;
-  font-size: 1.125rem;
-}
-.u-section-2 .u-table-cell-2,
-.u-section-2 .u-table-cell-3,
-.u-section-2 .u-table-cell-4 {
-  font-weight: 700;
-  color:black;
+.u-section-2 .u-table-cell-1{
+/*  border:solid red; */
+ font-size:max(1.3vw,10px);
+ text-align:center;
+ font-weight:700;
+ padding:0;
 }
 .u-section-2 select{
   background-color: inherit;
-  border: none;
+ text-align:center;
+ border: none;
 }
-.u-section-2 .u-table-body-1 {
-  line-height: 1.6;
-  font-size: 1rem;
-  text-transform: capitalize;
-  text-align:left;
+.u-section-2 .u-first-column{
+/*  border:solid red; */
+ font-weight: 700;
+  font-size:max(1.2vw,10px);
+ letter-spacing: 1px;
+ opacity:0.7
+}
+.u-section-2 th[id*="device"] {
+/*  border:solid red; */
+ font-size:max(1.3vw,10px);
+  font-weight: 700;
+  color:black;
+ min-width:28vw;
 }
 .u-section-2 td[id$="-Image"]{
-    height: 240px;
+    height: 160px;
     background:white;
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
 }
-.u-section-2 .u-table-cell-5,
-.u-section-2 .u-table-cell-9{
-  font-weight: 700;
-}
-.u-section-2 td[id$="-Price"],
-.u-section-2 td[id$="-Price"]:before,
-.u-section-2 td[id$="-Price"] > .u-container-layout:before {
-    transition-property: fill, color, background-color, stroke-width, border-style, border-width, border-top-width, border-left-width, border-right-width, border-bottom-width, custom-border, borders, box-shadow, text-shadow, opacity, border-radius, stroke, border-color, font-size, font-style, font-weight, text-decoration, letter-spacing, transform, background-image, image-zoom, background-size, background-position
+.u-section-2 .u-table-body-1 td:not(.u-first-column, td[id$="-Price"]){
+  font-size: max(1vw,12px);
+  text-align:left;
+ letter-spacing:1px
 }
 .u-section-2 td[id$="-Price"] {
+/*  border:solid red; */
   font-size: large;
   letter-spacing: 2px;
   font-weight: 700;
-  text-shadow: 0px 0px 0px rgba(0,0,0,0);
-  text-align:center;
   transition-duration: 0.25s;
-  box-shadow: 0px 0px 0px rgba(0,0,0,0);
-  transform: translateX(0px) translateY(0px) scale(1) rotate(0deg);
-  color: #11db0d !important;
+  color: #11db0d;
+ opacity:0.9
 }
-.u-section-2 td[id$="-Price"]:hover,
-.u-section-2 td[id$="-Price"].hover {
-    box-shadow: 0px 0px 0px  rgba(0,0,0,0) !important;
-    transform: translateX(0px) translateY(0px) scale(1.1) rotate(0deg) !important;
-    text-shadow: 0px 0px 0px rgba(0,0,0,0) !important
+.u-section-2 td[id$="-Price"]:hover{
+    transform: scale(1.1);
 }
-.u-section-2 .u-container-layout:hover td[id$="-Price"],
-.u-container-layout.hover .u-section-2 td[id$="-Price"] {
-    transform: rotate(0deg) scale(1) translateX(0px) translateY(0px) !important
+.u-section-2 .u-table-footer-1 *{
+ border:solid transparent;
 }
-.u-section-2 .u-table-footer-1 {
-  font-size: 1rem;
-}
-.u-section-2 .u-btn-1,
-.u-section-2 .u-btn-2,
-.u-section-2 .u-btn-3 {
-  background-image: none;
-  border-style: none;
+.u-section-2 .u-btn {
+ border:solid transparent;
   text-transform: uppercase;
   font-size: 0.875rem;
   letter-spacing: 1px;
@@ -113,21 +98,33 @@
   width: 60%;
   margin: 0 20%;
   padding:5%;
- 
+ width:17vw;
 }
-/* mobile-ratio 9:16 */
-@media only screen and (max-aspect-ratio: 9/16){
- .u-section-2 .u-text-1{
-  /*   border:solid; */
-  margin:3% 30%;
- }
- .u-section-2 .u-table-1{
-  min-width:97vw;
- }
- .u-section-2 [class^="u-btn"]{
-   font-size:80%;
- }
-  .u-section-2 td[id$="-Price"]{
-    font-size:110%;
-  }  
+/* END: standard to all screens */
+/*################ phone screens ##################*/
+@media only screen and (width <= 800px){
+.u-section-2 {}
+ .u-section-2 .u-sheet-1{
+ border:solid green;
 }
+ .u-section-2 .u-table-entity {
+ }
+ .u-section-2 .u-table-1 {
+/*  border:solid green; */
+ }
+.u-section-2 td[id$="-Image"]{
+    height: 25vw;
+ }
+.u-section-2 th[id*="device"],
+.u-section-2 .u-table-cell-1{
+ font-weight: 500;
+ padding:4px
+}
+.u-section-2 td[id$="-Price"] {
+ font-size:12px
+}
+ .u-section-2 .u-btn {
+ font-size:11px;
+  width:auto;
+}
+}/* END:  phone screens */

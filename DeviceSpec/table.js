@@ -48,35 +48,36 @@ function renderTable() {
   console.log(heads)
   // set table title
   section.querySelector(".u-text-1").innerText = device_DATA.name
-  
+  // set table
   Object.keys(heads).forEach((k,i)=>{
     const tr = document.createElement("tr")
     
+    // set table header
+    if (k == "Compare all variants"){
+      tr.innerHTML += `<td class="u-align-left u-border-1 u-border-grey-30 u-first-column u-table-cell u-table-cell-${i*4+1}">${k}</td>`
+      price.forEach((_,ii)=>{tr.innerHTML += `<td class="u-border-3 u-border-grey-15 u-border-no-left u-border-no-right u-column-${ii+2} u-table-cell u-table-cell-${i*4+ii+2}"><b>${heads[k][0][ii]+" + "+heads[k][1][ii]}</b></td>`})
+      // append data into the head of the table section
+      section.querySelector("thead").appendChild(tr);
+      
+    // set table rows
+    }else if (k != "buy"){
+      tr.innerHTML += `<td class="u-align-left u-border-1 u-border-grey-30 u-first-column u-table-cell u-table-cell-${i*4+1}">${k}</td>`
+      if ("ROM (Storage)RAM (Memory)".includes(k)) price.forEach((_,ii)=>{tr.innerHTML += `<td class="u-border-3 u-border-grey-15 u-border-no-left u-border-no-right u-data-column u-table-cell u-table-cell-${i*4+ii+2}">${heads[k][ii]}</td>`})
+      else if (k == "Price") price.forEach((_,ii)=>{tr.innerHTML += `<td class="u-border-3 u-border-grey-15 u-border-no-left u-border-no-right u-cell-price u-data-column u-table-cell u-table-cell-${i*4+ii+2}">₹ ${heads[k][ii]}</td>`})
+      else price.forEach((_,ii)=>{tr.innerHTML += `<td class="u-border-3 u-border-grey-15 u-border-no-left u-border-no-right u-column-${ii+2} u-table-cell u-table-cell-${i*4+ii+2}">${heads[k]}</td>`})
+      // append data into the body of the table section
+      section.querySelector("tbody").appendChild(tr);
+      
     // set table footer
-    if (k == "buy"){
+    }else{
       tr.innerHTML += `<td class="u-border-1 u-border-white u-table-cell u-table-cell-${i*4+1}"></td>`
       price.forEach((_,ii)=>{tr.innerHTML += `
-        <td class="u-border-1 u-border-white u-column-${ii+2} u-table-cell u-table-cell-${i*4+ii+2}">
-          <a href="${heads[k]}" class="u-border-radius-50 u-btn u-btn-round u-button-style u-palette-3-base u-btn-${ii+1}">BUY NOW</a>
+        <td class="u-border-1 u-border-white u-table-cell">
+          <a href="${heads[k]}" target="_blank" class="u-btn u-btn-round u-button-style u-radius-50 u-btn-${ii+1}">buy now</a>
         </td>`
       // append data into the footer of the table section
       section.querySelector("tfoot").appendChild(tr);      
       })
-    }else{
-      // set table header
-      if (k == "Compare all variants"){
-        tr.innerHTML += `<td class="u-align-left u-border-3 u-border-grey-15 u-border-no-left u-border-no-right u-first-column u-palette-5-light-1 u-table-cell u-table-cell-${i*4+1}">${k}</td>`
-        price.forEach((_,ii)=>{tr.innerHTML += `<td style="width:${100/(C+1)}%;" class="u-border-3 u-border-grey-15 u-border-no-left u-border-no-right u-column-${ii+2} u-table-cell u-table-cell-${i*4+ii+2}"><b>${heads[k][0][ii]+" + "+heads[k][1][ii]}</b></td>`})
-      // set table rows
-      }else{
-        tr.innerHTML += `<td class="u-align-left u-border-3 u-border-grey-15 u-border-no-left u-border-no-right u-first-column u-palette-5-light-1 u-table-cell u-table-cell-${i*4+1}">${k}</td>`
-        if ("ROM (Storage)RAM (Memory)".includes(k)) price.forEach((_,ii)=>{tr.innerHTML += `<td class="u-border-3 u-border-grey-15 u-border-no-left u-border-no-right u-data-column u-table-cell u-table-cell-${i*4+ii+2}">${heads[k][ii]}</td>`})
-        else if (k == "Price") price.forEach((_,ii)=>{tr.innerHTML += `<td class="u-border-3 u-border-grey-15 u-border-no-left u-border-no-right u-cell-price u-data-column u-table-cell u-table-cell-${i*4+ii+2}">₹ ${heads[k][ii]}</td>`})
-        else price.forEach((_,ii)=>{tr.innerHTML += `<td class="u-border-3 u-border-grey-15 u-border-no-left u-border-no-right u-column-${ii+2} u-table-cell u-table-cell-${i*4+ii+2}">${heads[k]}</td>`})
-      }
-    
-    // append data into the body of the table section
-    section.querySelector("tbody").appendChild(tr);
     }
   })  
 };//END: renderTable()
