@@ -10,21 +10,12 @@
   height: auto;
   cursor:pointer;
 }
-.u-block-67a6-3 { /* prev button */
-  right: auto;
-  left: calc(((100% - 1140px) / 2) + -85px);
-}
-.u-block-67a6-4 { /* next button */
-  right: calc(((100% - 1140px) / 2) + -85px);
-  left: auto;
-}
-
-.u-block-67a6-3, .u-block-67a6-4{ /* prev & next button */
+.u-block-67a6-3,
+.u-block-67a6-4{ /* prev & next button */
   width: 46px;
   height: 46px;
-  top: 338px;
+  top: 50%;
   position: absolute;
-  background-image: none;
   box-shadow: 5px 5px 20px 0 rgba(0,0,0,0.4);
   padding: 8px;
 }
@@ -32,5 +23,21 @@
   height: 500px;
   background-attachment: fixed;
 }
+/* END: standard to all screens */
+/*################ phone screens ##################*/
+@media only screen and (width <= 800px){
+[class*="u-section-2-"] .u-sheet-1 { /* slides */
+  height: 90vw;
+  background-attachment: fixed;
+}
+.u-block-67a6-3,
+.u-block-67a6-4{ /* prev & next button */
+  width: min(10vw,76px);
+  height: min(10vw,76px);
+  background:none;
+  color:black;
+}
+}/* END:  phone screens */
+
 
 

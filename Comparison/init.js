@@ -1,5 +1,5 @@
 // set href and src attriubtes
-function setValues(){
+function init(){
     // webiste logo link
     $(".u-logo-image").attr("src","../logo/logo.jpg")    
     $("a.u-logo").attr("href","../index.html")
@@ -22,5 +22,4 @@ function setValues(){
         "youtube":null,
         "whatsapp":null
     }
-    //
 };//END: setValues()

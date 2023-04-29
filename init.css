@@ -10,7 +10,7 @@
 /* phone screens */
 @media only screen and (width <= 800px){
 #device-info-1{display:block;}
- .u-block-67a6-1,/* slideshow container */
+/*  .u-block-67a6-1,/* slideshow container */
 #device-info-2{display:none;} 
 }
 html * {

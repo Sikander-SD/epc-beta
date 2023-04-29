@@ -2,7 +2,7 @@
 const screenPHONE = 800;//px
 
 // set href and src attriubtes
-function setValues(){
+function init(){
     //optional: device browser screen tester
     //document.body.append("width:"+screen.width+" x height:"+screen.height+" | availWidth:"+screen.availWidth+" x availHeight:"+screen.availHeight);
     // webiste logo link
@@ -26,9 +26,5 @@ function setValues(){
         "linkedin":null,
         "youtube":null,
         "whatsapp":null
-    }
-    //
-    
-
-        
+    }        
 };//END: setValues()

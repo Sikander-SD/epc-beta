@@ -25,7 +25,7 @@ xhr.send(null);
 
 
 // set href and src attriubtes
-function setValues(){try{
+function init(){
     // webiste logo link
     $(".u-logo-image").attr("src","../logo/logo.jpg")    
     $("a.u-logo").attr("href","../index.html")
@@ -48,8 +48,4 @@ function setValues(){try{
         "youtube":null,
         "whatsapp":null
     }
-    //    
-
-        
-}catch(e){console.log(e.message)}
 };

@@ -46,7 +46,7 @@
 /*  border:solid red; */
  width:200px; 
 }
-.u-section-3 .u-table-cell-2{background:greenyellow;}
+.u-section-3 .u-table-cell-2{background:#adff2fc7;}
 .u-section-3 .u-table-cell-3{background:skyblue;}
 .u-section-3 .u-table-cell-4{background:#eebaaf;}
 .u-section-3 .u-column-2,
@@ -66,7 +66,7 @@
   font-size: max(1vw,12px);
   text-align:left;
  letter-spacing:0.5px;
- font-weight:500;
+ font-weight:600;
 }
 .u-section-3 .u-cell-price {
 /*  border:solid red; */
@@ -115,7 +115,7 @@
 }
 .u-section-3 .u-first-column:not(.u-table-cell-1){
 /*  border:solid green; */
- font-size:max(1.4vw,10px);
+ font-size:max(1.4vw,13px);
  padding:2px;
 }
 .u-section-3 .u-table-body-1 td:not(.u-first-column, .u-cell-price){
