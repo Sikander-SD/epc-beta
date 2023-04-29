@@ -1,7 +1,10 @@
+// init parameters
+const screenPHONE = 800;//px
+
 // set href and src attriubtes
 function setValues(){
     //optional: device browser screen tester
-    document.body.append("width:"+screen.width+" x height:"+screen.height+" | availWidth:"+screen.availWidth+" x availHeight:"+screen.availHeight);
+    //document.body.append("width:"+screen.width+" x height:"+screen.height+" | availWidth:"+screen.availWidth+" x availHeight:"+screen.availHeight);
     // webiste logo link
     $(".u-logo-image").attr("src","logo/logo.jpg")    
     $("a.u-logo").attr("href","#")
