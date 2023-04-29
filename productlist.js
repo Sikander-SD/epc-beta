@@ -48,7 +48,7 @@ function loadProduct(product_file,i) {
               </div>
 <!-- 		product description  -->
               <div class="u-container-layout u-container-layout-3">
-                <h6 class="u-text u-text-default u-text-2">${deviceSpecs.info}</h6>
+                <h6 class="u-text u-text-default u-text-2">${productInfo(deviceSpecs)}</h6>
               </div>
 <!-- 	   product BUY button-->
               <div class="u-container-layout u-container-layout-4">
@@ -88,3 +88,26 @@ function loadProduct(product_file,i) {
   };//END: xhr()
   xhr.send(null);
 };//END: loadProduct()
+
+// set device info for different screens
+function productInfo(deviceSpecs){
+    return `<div id="device-info-1">
+    ${deviceSpecs.brand} <b2>${deviceSpecs.network}</b2> Internet.  
+    Camera <b2>${deviceSpecs["camera rear"].split("|")[0].replace(/MP(.*)/,"MP</b2>")} 
+    ${deviceSpecs.display.split("|").filter(x=>x.includes("Size")?x:"")[0].split(":")[1]} ${deviceSpecs.display.split("|")[0]} 
+    with ${deviceSpecs.cpu.split("|")[0]} CPU + 
+    <b2>${deviceSpecs.ram.split("|")[0]} RAM</b2> and <b2>${deviceSpecs.storage.split("|")[0]} Storage</b2>.
+    Battery <b2>${deviceSpecs.battery.split(" ")[0]}</b2>.  Colors ${deviceSpecs.color} 
+    ${deviceSpecs.fingerprint.includes("Yes")?" and <b2>Fingerprint</b2> Senesor":""}
+    </div>
+    <div id="device-info-2">
+    ${deviceSpecs.brand} device at <b2>${deviceSpecs.network}</b2> Internet speed with 
+    Back Camera <b2>${deviceSpecs["camera rear"].split("|")[0].replace("MP","MP</b2>")} and 
+    Selfie Camera <b2>${deviceSpecs["camera front"].split("|")[0].replace("MP","MP</b2>")}. 
+    Display ${deviceSpecs.display.split("|").filter(x=>x.includes("Size")?x:"")} ${deviceSpecs.display.split("|")[0]} 
+    Powered with ${deviceSpecs.processor +" "+deviceSpecs.cpu.split("|")[0]} Processor with 
+    <b2>${deviceSpecs.ram.split("|")[0]} RAM</b2> and <b2>${deviceSpecs.storage.split("|")[0]} Storage</b2>.
+    Battery <b2>${deviceSpecs.battery.replace(" ","</b2> ")}.  Colors ${deviceSpecs.color} 
+    ${deviceSpecs.fingerprint.includes("Yes")?" and also with <b2>Fingerprint</b2> Senesor":""}
+    </div>`.replaceAll("\n","")
+}
