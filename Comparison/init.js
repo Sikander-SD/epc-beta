@@ -1,3 +1,5 @@
+const screenPHONE = 800;//px
+
 // set href and src attriubtes
 function init(){
     // webiste logo link
