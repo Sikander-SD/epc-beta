@@ -1,7 +1,7 @@
 // init parameters
 const screenPHONE = 800;//px
 const path_SLIDES = "AdSlides/";
-let slidelist = []//[GDrive image id,amazon-Link or device-name]
+let slidelist = {};//{slide1:[GDrive image id,amazon-Link or device-name]}
 
 // get namelist of all slides    
 const xhr = new XMLHttpRequest();
