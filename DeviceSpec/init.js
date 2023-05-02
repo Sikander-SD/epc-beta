@@ -28,4 +28,8 @@ function init(){
         "youtube":null,
         "whatsapp":null
     }
+   Object.keys(social_links).forEach((k)=>{
+        if (social_links[k]) { $("a[title='"+k+"']").attr("href",social_links[k]) }
+        else { $("a[title='"+k+"']").attr("style","visibility:hidden;") }
+    });
 };
