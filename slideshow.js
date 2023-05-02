@@ -2,6 +2,7 @@
 
 // Dynamically create slides and add them to the slideshow container
 function renderSlides(container) {
+  console.log("renderSlides(container) is running")
   if (container){
     // set slides
     Object.keys(slidelist).forEach((sld,i)=>{i+=1
@@ -23,6 +24,7 @@ function renderSlides(container) {
 
 // Dynamically create slide dots and add them to the slideshow
 function renderSlideDots(container) {
+  console.log("renderSlideDots(container) is running")
     // set slide dots
     Object.keys(slidelist).forEach((_,i)=>{i+=1
         const dot = document.createElement('li');        
