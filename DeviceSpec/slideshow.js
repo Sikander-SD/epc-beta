@@ -2,7 +2,7 @@
 
 // Dynamically create slides and add them to the slideshow container
 function renderSlides(container) {
-    // set slides
+    // set slides    
     slidelist.forEach((sld,i)=>{i+=1
         const slide = document.createElement('div');        
         const attrs = {"class":`skrollable u-carousel-item u-clearfix u-container-align-center u-image u-image-contain u-parallax u-section-2-${i} skrollable-between`

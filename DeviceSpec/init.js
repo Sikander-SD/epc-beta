@@ -1,8 +1,8 @@
-// global parameters
-const urlParams = new URLSearchParams(window.location.search);
+// parameters
 const path_DEVICES = "../Devices/";
+const urlParams = new URLSearchParams(window.location.search);
 const device_NAME = urlParams.get("device").replaceAll(" ","_")
-let device_DATA,slidelist;
+let device_DATA,lslidelist;
 
 // set page title
 document.querySelector("title").innerText = urlParams.get("device");
@@ -11,18 +11,17 @@ document.querySelector("title").innerText = urlParams.get("device");
 const xhr = new XMLHttpRequest();
 xhr.open("GET", path_DEVICES + device_NAME + ".json",true);
 xhr.onreadystatechange = function() {
-    if (this.readyState === 4){
-        if (this.status === 200) {
-            device_DATA = JSON.parse(this.responseText)
-            slidelist = device_DATA.slides1.concat(device_DATA.slides2);
-            console.log(slidelist)
-        }
-        else {console.error(this.statusText)}
-    }
-    this.onerror = function () {console.error(this.statusText)}
+   if (this.readyState === 4){
+       if (this.status === 200) {
+           device_DATA = JSON.parse(this.responseText)
+           slidelist = device_DATA.slides1.concat(device_DATA.slides2);
+           console.log(slidelist)
+       }
+       else {console.error(this.statusText)}
+   }
+   this.onerror = function () {console.error(this.statusText)}
 };//END: xhr()
 xhr.send(null);
-
 
 // set href and src attriubtes
 function init(){
