@@ -2,7 +2,7 @@
 const path_DEVICES = "../Devices/";
 const urlParams = new URLSearchParams(window.location.search);
 const device_NAME = urlParams.get("device").replaceAll(" ","_")
-let device_DATA,lslidelist;
+let device_DATA=null,slidelist=[];
 
 // set page title
 document.querySelector("title").innerText = urlParams.get("device");

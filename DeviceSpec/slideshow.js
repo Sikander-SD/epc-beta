@@ -2,7 +2,7 @@
 
 // Dynamically create slides and add them to the slideshow container
 function renderSlides(container) {  
-  if (container){
+  if (container && slidelist.length){
     // set slides    
     slidelist.forEach((sld,i)=>{i+=1
         const slide = document.createElement('div');        
@@ -24,6 +24,7 @@ function renderSlides(container) {
 
 // Dynamically create slide dots and add them to the slideshow
 function renderSlideDots(container) {
+  if (container && slidelist.length){
     // set slide dots
     slidelist.forEach((_,i)=>{i+=1
         const dot = document.createElement('li');        
@@ -37,6 +38,7 @@ function renderSlideDots(container) {
         if (i==1) dot.classList.add('u-active');        
         container.appendChild(dot);
     })
+  }else setTimeout(()=>{renderSlideDots(container),1000})
 };//END: renderSlideDots
 
 //----------------------------------------- slide functionality
