@@ -3,21 +3,6 @@ const screenPHONE = 800;//px
 const path_SLIDES = "AdSlides/";
 let slidelist = {};//{slide1:[GDrive image id,amazon-Link or device-name]}
 
-// get namelist of all slides    
-const xhr = new XMLHttpRequest();
-xhr.open("GET", path_SLIDES+"namelist.json");
-xhr.onreadystatechange = function() {
-  if (this.readyState === this.DONE) {
-    if (this.status === 200) {
-      slidelist = JSON.parse(this.responseText);
-      console.log(slidelist)
-    } else {
-      console.log("Error: " + this.status);
-    }
-  }
-};
-xhr.send();
-
 // set href and src attriubtes
 function init(){
     //optional: device browser screen tester

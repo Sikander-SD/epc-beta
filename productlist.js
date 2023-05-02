@@ -6,6 +6,7 @@ const path_DEVICESPEC = "DeviceSpec/";
 //step:1 get namelist of devices
 // const xhr = new XMLHttpRequest();
 function renderProducts() {
+  const xhr = new XMLHttpRequest();
   xhr.open("GET", path_NAMELIST);
   xhr.onreadystatechange = function() {
       if (this.readyState === 4){

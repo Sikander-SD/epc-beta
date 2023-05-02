@@ -21,13 +21,29 @@ function renderSlides(container) {
         container.appendChild(slide);
     })
     console.log("renderSlides > forEach end, slides:",container.children.length)
-  }else setTimeout(()=>{renderSlides(container),1000})
+    
+  }else setTimeout(()=>{
+    // get namelist of all slides    
+    const xhr = new XMLHttpRequest();
+    xhr.open("GET", path_SLIDES+"namelist.json");
+    xhr.onreadystatechange = function() {
+      if (this.readyState === this.DONE) {
+        if (this.status === 200) {
+          slidelist = JSON.parse(this.responseText);
+          console.log(slidelist)
+        } else {
+          console.log("Error: " + this.status);
+        }
+      }
+    };
+    xhr.send();
+    renderSlides(container)
+  },1000)
 };//END: renderSlides()
 
 // Dynamically create slide dots and add them to the slideshow
 function renderSlideDots(container) {
     // set slide dots
-  if (container && Object.keys(slidelist)){
     Object.keys(slidelist).forEach((_,i)=>{i+=1
         const dot = document.createElement('li');        
         const attrs = {"class":"u-active-custom-color-4 u-palette-3-light-1 u-shape-circle",
@@ -40,7 +56,6 @@ function renderSlideDots(container) {
         if (i==1) dot.classList.add('u-active');        
         container.appendChild(dot);
     })
-  }else setTimeout(()=>{renderSlideDots(container),1000})
 };//END: renderSlideDots
 
 //----------------------------------------- slide functionality
