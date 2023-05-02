@@ -16,8 +16,7 @@ function init(){
     $("a.nav-contact").attr("href","Contact/contact.html")
     $("a.nav-about").attr("href","About/about.html")
     // slideshow images
-    renderSlides(document.querySelector("div.u-carousel-inner"));
-    renderSlideDots(document.querySelector("ol.u-carousel-indicators"));
+    renderSlides()
     // products list
     renderProducts()
     // social media links
