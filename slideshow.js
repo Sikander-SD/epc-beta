@@ -8,6 +8,9 @@ function renderSlides() {
     if (this.readyState === this.DONE) {
       if (this.status === 200) {
         slidelist = JSON.parse(this.responseText);
+        // diff screens sizes
+        if (window.screen.width <= screenPHONE) slidelist = slidelist.phone
+        else slidelist = slidelist.pc
         console.log(slidelist)
         showSlides(document.querySelector("div.u-carousel-inner"));
         showSlideDots(document.querySelector("ol.u-carousel-indicators"));        
