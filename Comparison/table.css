@@ -105,7 +105,7 @@
 @media only screen and (width <= 800px){
 .u-section-2 {}
  .u-section-2 .u-sheet-1{
- border:solid green;
+/*  border:solid green; */
 }
  .u-section-2 .u-table-entity {
  }
