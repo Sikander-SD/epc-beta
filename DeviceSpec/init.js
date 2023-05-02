@@ -1,4 +1,5 @@
 // parameters
+const screenPHONE = 800;//px
 const path_DEVICES = "../Devices/";
 const urlParams = new URLSearchParams(window.location.search);
 const device_NAME = urlParams.get("device").replaceAll(" ","_")
