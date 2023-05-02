@@ -3,7 +3,7 @@
 // Dynamically create slides and add them to the slideshow container
 function renderSlides(container) {
     console.log("renderSlides > main", "slidelist:",Object.keys(slidelist).length)
-  if (container && Object.keys(slidelist)){
+  if (container && Object.keys(slidelist).length){
     console.log("renderSlides > forEach start, slides:",container.children.length)
     // set slides
     Object.keys(slidelist).forEach((sld,i)=>{i+=1
