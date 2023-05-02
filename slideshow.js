@@ -61,23 +61,22 @@ showSlide(slideIndex);
 function nextSlide() {showSlide(slideIndex + 1)}
 function prevSlide() {showSlide(slideIndex - 1)}
 
-function showSlide(n) {try{
-  
+function showSlide(n) {  
   const slides = document.querySelector("div.u-carousel-inner").children;
   const dots = document.querySelector("ol.u-block-67a6-2").children;
+  if (slides.length && dots.length){
+    if (n >= slides.length) { slideIndex = 0;}
+    else if (n < 0) {         slideIndex = slides.length - 1;}
+    else {                    slideIndex = n; }
   
-  if (n >= slides.length) { slideIndex = 0;}
-  else if (n < 0) {         slideIndex = slides.length - 1;}
-  else {                    slideIndex = n; }
-  
-  for (let i = 0; i < slides.length; i++) {
-    slides[i].classList.remove("u-active");
-    dots[i].classList.remove("u-active");
-  }
-  slides[slideIndex].classList.add("u-active");
-  dots[slideIndex].classList.add("u-active");
+    for (let i = 0; i < slides.length; i++) {
+      slides[i].classList.remove("u-active");
+      dots[i].classList.remove("u-active");
+    }
+    slides[slideIndex].classList.add("u-active");
+    dots[slideIndex].classList.add("u-active");
 
-  clearInterval(slideInterval);
-  slideInterval = setInterval(nextSlide, duration)
-}catch(e){console.error(e.message)}
+    clearInterval(slideInterval);
+    slideInterval = setInterval(nextSlide, duration)
+  }  
 };
