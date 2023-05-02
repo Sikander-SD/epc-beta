@@ -1,4 +1,10 @@
 {
-	"slide1":["11QTJqL7BRRKOg2thR_XBn6rxUhNmgzXy","https://amzn.to/43ONj05"],
-	"slide2":["11RUJk-XfuygcmZe89w71_YPTh7mV22Wg","https://amzn.to/3owZPBl"]
+	"pc":{
+		"slide1":["11QTJqL7BRRKOg2thR_XBn6rxUhNmgzXy","https://amzn.to/43ONj05"],
+		"slide2":["11RUJk-XfuygcmZe89w71_YPTh7mV22Wg","https://amzn.to/3owZPBl"]
+	},
+	"phone":{
+		"slide1":["12PWm0b2zChqVclGE5H6HMCeL6SkGBQuW","https://amzn.to/43ONj05"],
+		"slide2":["12RDsea__w6_JkSRu1jmbGO5V97MzMuUa","https://amzn.to/3owZPBl"]
+	}	
 }
