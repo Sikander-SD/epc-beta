@@ -2,7 +2,9 @@
 
 // Dynamically create slides and add them to the slideshow container
 function renderSlides(container) {
+    console.log("renderSlides > main", "slidelist:",slidelist)
   if (container && Object.keys(slidelist)){
+    console.log("renderSlides > forEach start, slides:",container.children.length)
     // set slides
     Object.keys(slidelist).forEach((sld,i)=>{i+=1
         const slide = document.createElement('div');        
@@ -18,6 +20,7 @@ function renderSlides(container) {
         slide.innerHTML = `<div class="u-clearfix u-sheet u-sheet-1"></div>`;
         container.appendChild(slide);
     })
+    console.log("renderSlides > forEach end, slides:",container.children.length)
   }else setTimeout(()=>{renderSlides(container),1000})
 };//END: renderSlides()
 
