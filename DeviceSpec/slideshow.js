@@ -1,8 +1,28 @@
 // ----------------------------------------------- load slides
+function renderSlides_and_Table() {
+  // get device from namelist of devices
+  const xhr = new XMLHttpRequest();
+  xhr.open("GET", path_DEVICES + device_NAME + ".json",true);
+  xhr.onreadystatechange = function() {
+     if (this.readyState === 4){
+         if (this.status === 200) {
+             device_DATA = JSON.parse(this.responseText)
+             slidelist = device_DATA.slides1.concat(device_DATA.slides2);
+             console.log(slidelist)
+           // render slides
+             showSlides(document.querySelector("div.u-carousel-inner"));
+             showSlideDots(document.querySelector("ol.u-carousel-indicators"));
+           // render table
+             renderTable()
+         }else {console.error(this.statusText)}
+     }
+     this.onerror = function () {console.error(this.statusText)}
+  };//END: xhr()
+  xhr.send(null); 
+}
 
 // Dynamically create slides and add them to the slideshow container
-function renderSlides(container) {  
-  if (container && slidelist.length){
+function showSlides(container) {  
     // set slides    
     slidelist.forEach((sld,i)=>{i+=1
         const slide = document.createElement('div');        
@@ -17,14 +37,11 @@ function renderSlides(container) {
         if (i==1) slide.classList.add('u-active');        
         slide.innerHTML = `<div class="u-clearfix u-sheet u-sheet-1"></div>`;
         container.appendChild(slide);
-    })
-  }else setTimeout(()=>{renderSlides(container),1000})
-  
+    })  
 };//END: renderSlides()
 
 // Dynamically create slide dots and add them to the slideshow
-function renderSlideDots(container) {
-  if (container && slidelist.length){
+function showSlideDots(container) {
     // set slide dots
     slidelist.forEach((_,i)=>{i+=1
         const dot = document.createElement('li');        
@@ -38,7 +55,6 @@ function renderSlideDots(container) {
         if (i==1) dot.classList.add('u-active');        
         container.appendChild(dot);
     })
-  }else setTimeout(()=>{renderSlideDots(container),1000})
 };//END: renderSlideDots
 
 //----------------------------------------- slide functionality
