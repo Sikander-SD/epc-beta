@@ -50,7 +50,7 @@
 }
 /* product */
 .u-section-3 .u-layout{
-  border:solid red;
+/*   border:solid red; */
   margin-top:12px;
   display:flex;
 }
@@ -141,11 +141,11 @@
 /*################ phone screens ##################*/
 @media only screen and (width <= 800px){
 .u-section-3 .u-sheet-1{
-  border:solid green;
+/*   border:solid green; */
 }
 /* product */
 .u-section-3 .u-layout {
-  border:solid green;
+/*   border:solid green; */
 }
 /* image */
 .u-section-3 .u-layout-left {

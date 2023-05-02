@@ -27,7 +27,7 @@
   width:100%;
 }
 .u-header .u-sheet-1{
-  border:solid red;
+/*   border:solid red; */
   max-width:100vw;  
 }
 .u-header .header-row-1{
@@ -79,7 +79,7 @@
 /*   border:solid red; */
 }
 .u-footer .u-sheet-1 {
-  border:solid red;
+/*   border:solid red; */
   min-width:100%;  
   max-width:100%;
 }
@@ -150,7 +150,7 @@
 /*   border:solid green; */
 }
 .u-header .u-sheet-1{
-  border:solid green;
+/*   border:solid green; */
   min-width:100vw;
 }
 .u-header .header-row-1{
@@ -196,7 +196,7 @@
 /*   border:solid green; */
 }
   .u-footer .u-sheet-1{
-  border:solid green;
+/*   border:solid green; */
   }
   .u-footer .u-logo {
 /*   border:solid green; */
