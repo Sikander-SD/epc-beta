@@ -46,6 +46,10 @@
   margin:auto;
   left:-2vw;
 }
+.u-header .u-text-1:after {
+  font-size:1vw;
+  content:".beta"
+}
 .u-header .u-text-2 {
   margin:0 auto;
   margin-bottom:4px;

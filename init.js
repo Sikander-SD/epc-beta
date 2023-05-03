@@ -23,7 +23,7 @@ function init(){
     const social_links = {
         "facebook":null,
         "twitter":null,
-        "instagram":"https://www.instagram.com/mr.affiliated",
+        "instagram":"https://www.instagram.com/elite.phones.club",
         "linkedin":null,
         "youtube":null,
         "whatsapp":null

@@ -3,15 +3,21 @@
 #sec-fbc0 > div > form,
 #sec-8dde > div > div > a:nth-child(1),
 #sec-8dde > div > div > a:nth-child(2),
+#sec-8dde > div > div > a:nth-child(3),
 #sec-8dde > div > div > a:nth-child(4),
-#sec-8dde > div > div > a:nth-child(6),
 #device-info-1{display:none;}
 #device-info-2{display:block;}
-/* phone screens */
-@media only screen and (width <= 800px){
-#device-info-1{display:block;}
-/*  .u-block-67a6-1,/* slideshow container */
-#device-info-2{display:none;} 
+
+a.u-back-to-top{/* back to top button */ 
+height: 45px;
+ width: 45px;
+ margin-left: 0px;
+ margin-right: auto;
+ margin-top: 0px;
+ right: 20px;
+ bottom: 20px; 
+ padding: 10px; 
+ display: block; 
 }
 html * {
 /*     border:solid 1px; */
@@ -26,3 +32,11 @@ body{
 }
 /* custom bold text */ 
 b2{ font-weight:700}
+
+/* phone screens */
+@media only screen and (width <= 800px){
+#device-info-1{display:block;}
+/*  .u-block-67a6-1,/* slideshow container */
+a.u-back-to-top,
+#device-info-2{display:none;} 
+}
