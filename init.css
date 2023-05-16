@@ -1,15 +1,24 @@
-#sec-8dde > div > p.u-align-center.u-text.u-text-1,/*about*/
-#sec-8dde > div > p.u-align-center.u-text.u-text-2,/*coctact*/
+/* upcoming features
+- search device
+- sort devices by prices
+- filter devices by Features: ram | rom | camera
+- about page
+- contact page
+- feedback page
+- login page
+*/
+
+.u-footer .block-page-links .u-text-1,/*about */
+.u-footer .block-page-links .u-text-2,/*contact*/
+.u-footer .block-page-links .u-text-3,/*feedback*/
+.u-section-3 .u-text-4,/* views */
+.u-section-3 .u-text-5,/* ratings */
 #sec-fbc0 > div > form,
-#sec-8dde > div > div > a:nth-child(1),
-#sec-8dde > div > div > a:nth-child(2),
-#sec-8dde > div > div > a:nth-child(3),
-#sec-8dde > div > div > a:nth-child(4),
 #device-info-1{display:none;}
 #device-info-2{display:block;}
 
 a.u-back-to-top{/* back to top button */ 
-height: 45px;
+ height: 45px;
  width: 45px;
  margin-left: 0px;
  margin-right: auto;
@@ -35,8 +44,8 @@ b2{ font-weight:700}
 
 /* phone screens */
 @media only screen and (width <= 800px){
-#device-info-1{display:block;}
-/*  .u-block-67a6-1,/* slideshow container */
-a.u-back-to-top,
-#device-info-2{display:none;} 
+ #device-info-1{display:block;}
+
+ a.u-back-to-top,
+ #device-info-2{display:none;} 
 }

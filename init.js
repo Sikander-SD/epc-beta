@@ -1,5 +1,4 @@
 // init parameters
-const screenPHONE = 800;//px
 const path_SLIDES = "AdSlides/";
 let slidelist = {};//{slide1:[GDrive image id,amazon-Link or device-name]}
 
@@ -8,13 +7,14 @@ function init(){
     //optional: device browser screen tester
     //document.body.append("width:"+screen.width+" x height:"+screen.height+" | availWidth:"+screen.availWidth+" x availHeight:"+screen.availHeight);
     // webiste logo link
-    $(".u-logo-image").attr("src","logo/logo.jpg")    
+    $(".u-logo-image").attr("src","logo/logo-400x400.png")
     $("a.u-logo").attr("href","#")
     // Navigation Tabs links
     $("a.nav-home").attr("href","#")
     $("a.nav-compare").attr("href","Comparison/comparison.html")
     $("a.nav-contact").attr("href","Contact/contact.html")
     $("a.nav-about").attr("href","About/about.html")
+    $("a.nav-feedback").attr("href","Feedback/feedback.html")
     // slideshow images
     renderSlides()
     // products list
