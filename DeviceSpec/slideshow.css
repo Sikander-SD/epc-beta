@@ -1,0 +1,428 @@
+:root{
+  --info-color:black;
+  --icon-background-color:inherit;
+}
+/* default */
+[class*="u-section-2-"] .u-sheet-1{/*slides*/
+  border: solid rgb(223 0 0);
+}
+/* ----------------------------------slide 1 and slide 2------------------------------ */
+.slide-image-1,
+.slide-image-2{ 
+/*   border: solid red;   */
+    width:500px;
+    height:500px;
+    margin:auto;
+}
+/* ----------------------------------slide 1 */
+.slide-image-1 .device-image-container {
+/*     border: solid red; */
+    height:300px;    
+    width:230px;
+    position:absolute;  
+    margin:6.3rem 8rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+/*     overflow:hidden; */
+}
+.slide-image-1 .device-image {
+/*     border: solid red; */
+    max-height:100%;
+/*     max-width:100%; */
+}
+.slide-image-1 .device-name{
+/*     border: solid red; */
+    position:fixed;
+    color:var(--info-color);
+    opacity:20%;
+    width:30rem;
+    text-align:center;
+    font-weight:800;
+    font-size:50px;
+    bottom:0;
+    z-index:1;
+}
+.label-block {
+/*   border: solid red; */
+  position:absolute;
+  max-width:130px;
+  line-height:18px;
+}
+.label-block .icon{
+/*     border: solid red; */
+  width:20px;
+  height:20px;
+  display:inline-block; 
+  background-size:cover;
+  background-color:var(--icon-background-color);
+}
+.label-block .label span{
+/*   border: solid red; */
+  vertical-align:6px;
+  margin-left:5px;
+  padding-left:2.5px;
+  padding-right:2.5px;
+  font-family:verdana;
+  font-size:10px;
+  font-weight:600;
+  text-transform:uppercase; 
+  box-shadow: 3px 3px 5px 1px rgb(0 0 0 / 22%);
+  background-color:white;  
+}
+.label-block .info{
+/*   border: solid red; */
+  margin:0;
+  font-size:10px;
+  font-weight:500; 
+  text-transform:capitalize;  
+  line-height:11px;
+  overflow:hidden;
+  color:var(--info-color);
+}
+.label-block span.info{
+/*   border: solid red; */
+  vertical-align:6px;
+  margin-left:6px;  
+}
+p.promo{
+/*   border: solid red; */
+  font-size:10px;
+  font-weight:600;
+  text-align:right;
+  position:absolute;
+  bottom:2px;
+  margin:0;
+  width:500px;
+  padding-right:3px;
+  color:var(--info-color);
+}
+.camera-back{
+/*     border: solid red; */
+    top:0;    
+    margin:5px;
+    max-width:200px;
+}
+.camera-front{
+/*     border: solid red; */
+    top:0;
+    margin:5px;
+    margin-left:22rem;
+}
+.wifi{
+/*     border: solid red; */
+    top:50px;
+    margin:5px;
+    margin-left:10rem;
+    text-align:center;    
+}
+.bluetooth{  
+/*     border: solid red; */
+    top:5px;
+    margin:5px;
+    margin-left:14rem;
+    text-align:center;
+}
+.nfc{
+/*     border: solid red; */
+    top:0;
+    margin:60px;
+    margin-left:16rem;
+}
+.flash-light{
+/*     border: solid red; */
+    top:100px;
+    margin-left:5px;
+}
+.cpu{
+/*     border: solid red; */
+    top:154px;
+    margin-left:5px;
+}
+.gpu{
+/*     border: solid red; */
+    top:265px;
+    margin-left:5px;
+}
+.ram{
+/*     border: solid red; */
+    top:310px;
+    margin-left:5px;
+}
+.storage{
+/*     border: solid red; */
+    top:360px;
+    margin-left:5px;
+}
+.special-features{
+/*     border: solid red; */
+    top:410px;
+    margin-left:5px;
+}
+.charging-port{
+/*     border: solid red; */
+    top:403px;
+    margin-left:9rem;
+    max-width:190px;
+}
+.audio-jack{
+/*     border: solid red; */
+    top:408px;
+    margin-left:21rem;
+}
+.speaker{
+/*     border: solid red; */
+    top:403px;
+    margin-left:214em;
+}
+.battery{
+/*     border: solid red; */
+    top:360px;
+    margin-left:23rem;
+}
+.os{
+/*     border: solid red; */
+    top:310px;
+    margin-left:23rem;
+}
+.display{
+/*     border: solid red; */
+    top:160px;
+    margin-left:23rem;
+}
+.network{
+/*     border: solid red; */
+    top:90px;
+    margin-left:23rem;
+}
+/* ----------------------------------slide 2 */
+.slide-image-2 .img-side,
+.slide-image-2 .top-bottom,
+.slide-image-2 .img-tag{
+  position:absolute;
+}
+.slide-image-2 .img-tag{
+/*     border: solid red; */
+    text-transform:uppercase;
+    font-weight:800;
+    background:yellow;
+    color:red;
+    text-align:center;
+    padding:1px 8px;
+    border-radius:10px;
+    border:solid #00000082 1px;  
+}
+.img-tag.left {
+/*     border: solid red; */
+    margin:0;
+    margin-left:10px;    
+    top:5px;
+}
+.img-tag.right {
+/*     border: solid red; */
+    margin:0;
+    margin-left:425px;
+    top:5px;
+}
+.img-tag.top{
+/*     border: solid red; */
+  margin:0;
+  margin-left:40%;
+  margin-top:-60px;  
+}
+.img-tag.bottom{
+/*     border: solid red; */
+  margin:0;
+  margin-left:40%;
+  margin-top:40px;  
+}
+.slide-image-2 .top-bottom{
+/*     border: solid red; */
+    width:300px;
+    min-height:60%;
+    margin:5rem 6.2rem;
+}
+.slide-image-2 .block-top,
+.slide-image-2 .block-bottom{
+/*     border: solid red; */
+    position:absolute;   
+    width:100%;  
+}
+.slide-image-2 .img-top,
+.slide-image-2 .img-bottom {
+/*     border: solid red; */
+    width:100%;
+    height:40px;
+    position:relative;    
+}
+.slide-image-2 .img-left,
+.slide-image-2 .img-right {
+/*     border: solid red; */
+    width:35px;
+    height:88%;      
+    top:40px;
+}
+.slide-image-2 .img-left{
+/*     border: solid red; */
+    margin-left:10px;  
+}
+.slide-image-2 .img-right{
+/*     border: solid red; */
+    margin-left:455px;
+}
+/* END: standard to all screens */
+/*################ phone screens ##################*/
+/* download image start *********************/
+.u-back-to-top,
+.u-block-67a6-3,
+.u-block-67a6-4{display:none !important;}
+/* download image end *****************/
+@media only screen and (width <= 800px){
+[class*="u-section-2-"] .u-sheet-1 { /* slides */
+  border: solid green;
+}
+  /* ----------------------------------slide 1 and slide 2------------------------------ */
+.slide-image-1,
+.slide-image-2{ 
+/*     border: solid green; */
+    width:100vw;
+    height:100vw;
+}
+/* ----------------------------------slide 1 */
+.slide-image-1 .device-image-container {
+/*     border: solid green; */
+    height:60%;
+    width:53%;
+    margin:20% 21%;
+}
+.slide-image-1 .device-image {
+/*     border: solid green; */
+    width:100%;
+}
+.slide-image-1 .device-name{
+/*     border: solid green; */
+    width:97%;
+    font-size:10vw;
+}
+.label-block {
+/*   border: solid green; */
+  max-width:27%;
+}
+.label-block .icon{
+/*     border: solid green; */
+  width:4vw;
+  height:4vw;
+}
+.label-block .label span{
+/*   border: solid green; */
+  vertical-align:1.3vw;
+  padding-left:1px;
+  padding-right:1px;
+  font-size:1.8vw;
+}
+.label-block .info{
+/*   border: solid green; */
+  font-size:max(7px,1.8vw);
+  line-height:max(8px,2.2vw);
+}
+.label-block span.info{
+/*   border: solid green; */
+  vertical-align:1.1vw;
+  margin-left:6px;
+  line-height:6vw;
+}
+p.promo{
+/*   border: solid green; */
+  font-size:max(8px,2vw);
+  bottom:0;
+  width:100%;
+}
+.camera-back{
+/*     border: solid green; */
+    min-width:35vw;
+    margin-left:2vw;
+}
+.camera-front{
+/*     border: solid green; */
+    margin-left:72%;
+}
+.wifi{
+/*     border: solid green; */
+    top:10vw;
+    margin-left:37%;
+}
+.bluetooth{  
+/*     border: solid green; */
+    top:2vw;
+    margin:0;
+    margin-left:50%;
+}
+.nfc{
+/*     border: solid green; */
+    top:12%;
+    margin:0;
+    margin-left:55%;
+}
+.flash-light{
+/*     border: solid green; */
+    top:22%;
+    margin-left:2vw;
+}
+.cpu{
+/*     border: solid green; */
+    top:31%;
+    margin-left:2vw;
+}
+.gpu{
+/*     border: solid green; */
+    top:54%;
+    margin-left:2vw;
+}
+.ram{
+/*     border: solid green; */
+    top:63%;
+    margin-left:2vw;
+}
+.storage{
+/*     border: solid green; */
+    top:72%;
+    margin-left:2vw;
+}
+.special-features{
+/*     border: solid green; */
+    top:83%;
+    margin-left:2vw;
+}
+.charging-port{
+/*     border: solid green; */
+    top:80%;
+    margin-left:30%;
+    min-width:35vw;
+}
+.audio-jack{
+/*     border: solid green; */
+    top:80%;
+    margin-left:65%;
+}
+.battery{
+/*     border: solid green; */
+    top:72%;
+    margin-left:70%;
+}
+.os{
+/*     border: solid green; */
+    top:60%;
+    margin-left:70%;
+}
+.display{
+/*     border: solid green; */
+    top:30%;
+    margin-left:70%;
+}
+.network{
+/*     border: solid green; */
+    top:16%;
+    margin-left:70%;
+}
+
+}/* END:  phone screens */
