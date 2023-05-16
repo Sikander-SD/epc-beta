@@ -1,23 +1,24 @@
 const path_DEVICES = "../Devices/";
+const path_IMAGES = "../Devices/Images/";
 // select header's <select> elements
 const device1 = document.querySelector("th#device1").querySelector("#mobile-devices");
 const device2 = document.querySelector("th#device2").querySelector("#mobile-devices");
 const device3 = document.querySelector("th#device3").querySelector("#mobile-devices");
 
-// append device names into the <options>
+// append device names into the <options> dropdown menu
 fetch(path_DEVICES+"namelist.txt")
-.then(response => response.text())
-.then(namelist => {
-	namelist = namelist.trim().split("\n");
-	namelist.forEach(name => {
-		const option = document.createElement("option");
-		option.value = name.replaceAll(" ","_");
-		option.textContent = name;
-		device1.appendChild(option);
-		device2.appendChild(option.cloneNode(true));
-		device3.appendChild(option.cloneNode(true));
-  });
-});
+	.then(response => response.text())
+	.then(namelist => {
+		namelist = namelist.split("\n");
+		namelist.forEach(name => {
+			const option = document.createElement("option");
+			option.value = name.replaceAll(" ","_").replaceAll(/_[\r]$/gm,"")
+			option.textContent = name;
+			device1.appendChild(option);
+			device2.appendChild(option.cloneNode(true));
+			device3.appendChild(option.cloneNode(true));
+	  });
+	});
 
 // set table heads
 function renderTable() {
@@ -83,44 +84,47 @@ function fetchDeviceSpecs(col) {
         // Parse the device specifications as a JSON object
         const device_DATA = JSON.parse(this.responseText);
         // Update the table cells with the device specifications
-        document.getElementById(col + "-Image".replaceAll(/[() ]/gm,"")).style.backgroundImage = `url(${device_DATA.img})`;
+        // document.getElementById(col + "-Image".replaceAll(/[() ]/gm,"")).style.backgroundImage = `url(https://drive.google.com/uc?export=view&id=${device_DATA.img})`;
+        document.getElementById(col + "-Image".replaceAll(/[() ]/gm,"")).style.backgroundImage = `url(${path_IMAGES+device_DATA.name.replaceAll(" ","_")}/main.png)`;
         document.getElementById(col + "-Brand".replaceAll(/[() ]/gm,"")).innerHTML = device_DATA.brand;
         document.getElementById(col + "-Model".replaceAll(/[() ]/gm,"")).innerHTML = device_DATA.model;
         document.getElementById(col + "-Colors".replaceAll(/[() ]/gm,"")).innerHTML = device_DATA.color;
         document.getElementById(col + "-Display Screen".replaceAll(/[() ]/gm,"")).innerHTML = device_DATA.display.replaceAll("|","<br>");
-        document.getElementById(col + "-Screen Glass".replaceAll(/[() ]/gm,"")).innerHTML = device_DATA.glass;
+        document.getElementById(col + "-Screen Glass".replaceAll(/[() ]/gm,"")).innerHTML = device_DATA.glass?device_DATA.glass:"tempered glass";
         document.getElementById(col + "-Brightness".replaceAll(/[() ]/gm,"")).innerHTML = device_DATA.brightness;
         document.getElementById(col + "-Waterproof".replaceAll(/[() ]/gm,"")).innerHTML = device_DATA.waterproof;
         document.getElementById(col + "-Operating System (OS)".replaceAll(/[() ]/gm,"")).innerHTML = device_DATA.os.replaceAll("|","<br>");
         document.getElementById(col + "-Processor (Chipset)".replaceAll(/[() ]/gm,"")).innerHTML = device_DATA.processor;
-        document.getElementById(col + "-CPU".replaceAll(/[() ]/gm,"")).innerHTML = device_DATA.cpu.replaceAll("|","<br>");
+        document.getElementById(col + "-CPU".replaceAll(/[() ]/gm,"")).innerHTML = device_DATA.cpu.replaceAll(" & ","|").replaceAll("|","<br>")
         document.getElementById(col + "-GPU".replaceAll(/[() ]/gm,"")).innerHTML = device_DATA.gpu;
-        document.getElementById(col + "-Card Slot".replaceAll(/[() ]/gm,"")).innerHTML = device_DATA["card slot"];
-        document.getElementById(col + "-ROM (Storage)".replaceAll(/[() ]/gm,"")).innerHTML = device_DATA.storage.replaceAll(",",", ").replaceAll("|","<br>");
-        document.getElementById(col + "-RAM (Memory)".replaceAll(/[() ]/gm,"")).innerHTML = device_DATA.ram.replaceAll(",",", ").replaceAll("|","<br>");
+        document.getElementById(col + "-Card Slot".replaceAll(/[() ]/gm,"")).innerHTML = device_DATA["card slot"].replace("microsd","microSD");
+        document.getElementById(col + "-ROM (Storage)".replaceAll(/[() ]/gm,"")).innerHTML = device_DATA.storage.replaceAll(",",", ").replaceAll("|","<br>")+" system";
+        document.getElementById(col + "-RAM (Memory)".replaceAll(/[() ]/gm,"")).innerHTML = device_DATA.ram.replaceAll(",",", ").replaceAll("|","<br>")+" system";
         document.getElementById(col + "-Battery".replaceAll(/[() ]/gm,"")).innerHTML = device_DATA.battery;
-        document.getElementById(col + "-Charging Port".replaceAll(/[() ]/gm,"")).innerHTML = device_DATA["charging port"].replaceAll("|","<br>");
-        document.getElementById(col + "-Charging Power".replaceAll(/[() ]/gm,"")).innerHTML = device_DATA["charging power"];
+        document.getElementById(col + "-Charging Port".replaceAll(/[() ]/gm,"")).innerHTML = (device_DATA["charging port"].toLowerCase().includes("otg")? (device_DATA["charging port"]+" supported"):device_DATA["charging port"]).replaceAll("|","<br>");
+        document.getElementById(col + "-Charging Power".replaceAll(/[() ]/gm,"")).innerHTML = device_DATA["charging power"].replace("@","- full charge @")+"*";
         document.getElementById(col + "-Wireless Charging".replaceAll(/[() ]/gm,"")).innerHTML = device_DATA["wireless charging"];
-        document.getElementById(col + "-Camera Rear (Back)".replaceAll(/[() ]/gm,"")).innerHTML = (device_DATA["camera rear"]+"|Image: "+device_DATA["rear image"]).replaceAll("|","<br>");
-        document.getElementById(col + "-Camera Front".replaceAll(/[() ]/gm,"")).innerHTML = (device_DATA["camera front"]+"|Image: "+device_DATA["front image"]).replaceAll("|","<br>");
+        document.getElementById(col + "-Camera Rear (Back)".replaceAll(/[() ]/gm,"")).innerHTML = getReso(device_DATA["camera rear"],device_DATA["rear image"]).replaceAll("|","<br>");
+        document.getElementById(col + "-Camera Front".replaceAll(/[() ]/gm,"")).innerHTML = getReso(device_DATA["camera front"],device_DATA["front image"]).replaceAll("|","<br>");
         document.getElementById(col + "-LED Flash Light".replaceAll(/[() ]/gm,"")).innerHTML = device_DATA["led flash"];
         document.getElementById(col + "-Front Flash".replaceAll(/[() ]/gm,"")).innerHTML = device_DATA["front flash"];
         document.getElementById(col + "-Wireless Display<br>(Screen Cast)".replaceAll(/[() ]/gm,"")).innerHTML = device_DATA["wireless display"];
         document.getElementById(col + "-SIM".replaceAll(/[() ]/gm,"")).innerHTML = device_DATA["dual sim"].replaceAll("|","<br>");
         document.getElementById(col + "-Internet Network".replaceAll(/[() ]/gm,"")).innerHTML = device_DATA.network;
         document.getElementById(col + "-Wi-Fi".replaceAll(/[() ]/gm,"")).innerHTML = device_DATA.wifi;
-        document.getElementById(col + "-Bluetooth".replaceAll(/[() ]/gm,"")).innerHTML = device_DATA.bluetooth;
+        document.getElementById(col + "-Bluetooth".replaceAll(/[() ]/gm,"")).innerHTML = "v"+device_DATA.bluetooth;
         document.getElementById(col + "-NFC".replaceAll(/[() ]/gm,"")).innerHTML = device_DATA.nfc;
         document.getElementById(col + "-Fingerprint".replaceAll(/[() ]/gm,"")).innerHTML = device_DATA.fingerprint;
-        document.getElementById(col + "-Audio Jack".replaceAll(/[() ]/gm,"")).innerHTML = device_DATA.audio;
-        document.getElementById(col + "-Speaker Sound".replaceAll(/[() ]/gm,"")).innerHTML = device_DATA.speaker;
+        document.getElementById(col + "-Audio Jack".replaceAll(/[() ]/gm,"")).innerHTML = device_DATA.audio.toLowerCase().match(/type-c|lightning/g)?(device_DATA.audio+" as audio port"):(device_DATA.audio.replaceAll(" ","")+" audio jack");
+        document.getElementById(col + "-Speaker Sound".replaceAll(/[() ]/gm,"")).innerHTML = device_DATA.speaker.toLowerCase().match(/stereo/m)? "stereo":"mono"
         document.getElementById(col + "-In-Box Items".replaceAll(/[() ]/gm,"")).innerHTML = device_DATA["in-box items"];
         document.getElementById(col + "-Manufacturer".replaceAll(/[() ]/gm,"")).innerHTML = device_DATA.manufacturer;
         document.getElementById(col + "-Release Date".replaceAll(/[() ]/gm,"")).innerHTML = device_DATA["release date"];
         document.getElementById(col + "-Price".replaceAll(/[() ]/gm,"")).innerHTML = device_DATA.price.map(x=>"₹ "+x).join(" | ");
-        document.querySelector("tfoot .u-btn-"+col.match(/[1-3]/gm)[0]).href = device_DATA.buy;
-
+		document.querySelector("tfoot .u-btn-"+col.match(/[1-3]/gm)[0]).href = device_DATA.link;
+		// update price : issue -> need to add links to all device variants to update each device's price
+        // updatePrice(device_DATA.url).then(p=>document.getElementById(col + "-Price".replaceAll(/[() ]/gm,"")).innerHTML = "₹ "+p[0].split(".")[0])
+		
     } else {console.error(this.statusText)};
   };
   xhr.onerror = function () { console.error(xhr.statusText)};

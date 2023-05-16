@@ -1,15 +1,14 @@
-const screenPHONE = 800;//px
-
 // set href and src attriubtes
 function init(){
     // webiste logo link
-    $(".u-logo-image").attr("src","../logo/logo.jpg")    
+    $(".u-logo-image").attr("src","../logo/logo-400x400.png")
     $("a.u-logo").attr("href","../index.html")
     // Navigation Tabs links
     $("a.nav-home").attr("href","../index.html")
     $("a.nav-compare").attr("href","#")
     $("a.nav-contact").attr("href","../Contact/contact.html")
     $("a.nav-about").attr("href","../About/about.html")
+    $("a.nav-feedback").attr("href","../Feedback/feedback.html")
     // slideshow images
     // renderSlides(document.querySelector("div.u-carousel-inner"));
     // renderSlideDots(document.querySelector("ol.u-carousel-indicators"));
@@ -19,7 +18,7 @@ function init(){
     const social_links = {
         "facebook":null,
         "twitter":null,
-        "instagram":"https://www.instagram.com/mr.affiliated",
+        "instagram":"https://www.instagram.com/elite.phones.club",
         "linkedin":null,
         "youtube":null,
         "whatsapp":null
