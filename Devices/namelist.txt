@@ -6,6 +6,7 @@ iQOO 9 SE 5G
 iQOO Neo 6 5G 
 iQOO Neo 7 5G 
 iQOO Z6 44W 
+iQOO Z6 Lite 5G 
 iQOO Z6 Pro 5G 
 iQOO Z7 5G 
 Lava Blaze 
@@ -19,13 +20,16 @@ OnePlus 10 Pro 5G
 OnePlus 11R 5G 
 OnePlus 11 5G 
 OnePlus Nord 2T 5G 
+OnePlus Nord CE 2 5G 
 OnePlus Nord CE 2 Lite 5G 
 OnePlus Nord CE 3 Lite 5G 
 Oppo A57 
 Oppo A78 5G 
+Oppo F23 5G 
 Realme Narzo 50 
 Realme narzo 50i Prime 
 Realme Narzo N55 
+Redmi 10 Power 
 Redmi 10 Prime 
 Redmi 11 Prime 
 Redmi 12C 
