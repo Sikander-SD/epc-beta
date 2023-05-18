@@ -87,23 +87,23 @@ function setBgColor(image) {
 };//END:setBgColor()
 // set info text in 1st and 2nd slide images
 function setInfo(l) {
-  const data = {"camera-back":getReso(device_DATA["camera rear"],device_DATA["rear image"]).replaceAll("|","<br>").replaceAll(/:|wide|ultra|depth|micro|Video|[0-9]{2,4}[/]/gm,"").replaceAll(" MP","MP")
-                ,"camera-front":getReso(device_DATA["camera front"],device_DATA["front image"]).replaceAll("|","<br>").replaceAll(/:|wide|ultra|depth|micro|Video|[0-9]{2,4}[/]/gm,"").replaceAll(" MP","MP")
+  const data = {"camera-back":getReso(device_DATA["camera rear"],device_DATA["rear image"]).replaceAll("|","<br>").replaceAll(/:|wide|ultra[- ]?wide|depth|micro|[mM]acro|Video|[0-9]{2,4}[/]/gm,"").replaceAll(" MP","MP")
+                ,"camera-front":getReso(device_DATA["camera front"],device_DATA["front image"]).replaceAll("|","<br>").replaceAll(/:|wide|ultra[- ]?wide|depth|micro|[mM]acro|Video|[0-9]{2,4}[/]/gm,"").replaceAll(" MP","MP")
                 ,"wifi":device_DATA.wifi.match(/v(.*)/gm)
                 ,"bluetooth":"v"+device_DATA.bluetooth
                 ,"nfc":""
                 // ,"ir"
                 ,"flash-light":device_DATA["led flash"]+(device_DATA["front flash"].toLowerCase().includes("no")?"":"<br>screen flash")
-                ,"cpu":device_DATA.cpu.replaceAll(" & ","|").replaceAll("|","<br>").replaceAll(/[[pP]rime|[gG]old|[sS]ilver/gm,"")
+                ,"cpu":((x=device_DATA.processor+"<br>"+device_DATA.cpu.replaceAll(" & ","|").replaceAll("|","<br>").replaceAll(/[[pP]rime|[gG]old|[sS]ilver/gm,""))=>x.includes("Cort")?x.replaceAll(/Kryo [0-9]{2,4}/gm,""):x)()
                 ,"gpu":device_DATA.gpu.replaceAll("|","<br>")
                 ,"storage":(device_DATA.storage.replaceAll("|","<br>")+" system").replaceAll(",",", ")
                 ,"ram":(device_DATA.ram.replaceAll("|","<br>")+" system").replaceAll(",",", ")
                 ,"charging-port":(((port=device_DATA["charging port"])=>{return port.toLowerCase().includes("otg")? (port+" supported"):port})()+"<br>"+(device_DATA["charging power"].replace("@","- full charge @")+"*")).replaceAll("|","<br>")
                 ,"audio-jack":((a=device_DATA.audio)=>{return a.toLowerCase().match(/type-c|lightning/g)?(a+" as audio port"):(a.replaceAll(" ","")+" audio jack")})()
                 // ,"speaker":device_DATA.speaker.toLowerCase().match(/stereo/m)? "stereo":"mono"
-                ,"battery":device_DATA.battery
+                ,"battery":((b=device_DATA.battery.split(" "))=>b[0]+" capacity<br>"+b[1]+" battery")()
                 ,"os":device_DATA.os.replaceAll("|","<br>")
-                ,"display":((device_DATA.display.replaceAll("|","<br>").replace(" + ","<br>")+"<br>glass: ")+(device_DATA.glass?device_DATA.glass:"tempered glass")+"<br>brightness: "+device_DATA.brightness).replaceAll(/[rR]esolution/g,"reso").replace(" x ","x")
+                ,"display":((device_DATA.display.replaceAll("|","<br>").replace(" + ","<br>").replace(device_DATA.display.match(/HDR10[+]?/),device_DATA.display.match(/HDR10[+]?/)+" support")+"<br>glass: ")+(device_DATA.glass?device_DATA.glass:"tempered glass")+"<br>brightness: "+device_DATA.brightness).replaceAll(/[rR]esolution/g,"reso").replace(" x ","x")
                 ,"network":(device_DATA.network+" Internet Speed|"+device_DATA["dual sim"]).replaceAll("|","<br>")
                }
     return data[l]  

@@ -88,13 +88,13 @@
 p.promo{
 /*   border: solid red; */
   font-size:10px;
-  font-weight:600;
+  font-weight:700;
   text-align:right;
   position:absolute;
   bottom:2px;
   margin:0;
   width:500px;
-  padding-right:3px;
+  padding-right:4px;
   color:var(--info-color);
 }
 .camera-back{
@@ -273,9 +273,9 @@ p.promo{
 /* END: standard to all screens */
 /*################ phone screens ##################*/
 /* download image start *********************/
-.u-back-to-top,
+/* .u-back-to-top,
 .u-block-67a6-3,
-.u-block-67a6-4{display:none !important;}
+.u-block-67a6-4{display:none !important;} */
 /* download image end *****************/
 @media only screen and (width <= 800px){
 [class*="u-section-2-"] .u-sheet-1 { /* slides */
@@ -316,14 +316,12 @@ p.promo{
 .label-block .label span{
 /*   border: solid green; */
   vertical-align:1.3vw;
-  padding-left:1px;
-  padding-right:1px;
   font-size:1.8vw;
 }
 .label-block .info{
 /*   border: solid green; */
   font-size:max(7px,1.8vw);
-  line-height:max(8px,2.2vw);
+  line-height:max(9px,2.2vw);
 }
 .label-block span.info{
 /*   border: solid green; */
@@ -333,7 +331,7 @@ p.promo{
 }
 p.promo{
 /*   border: solid green; */
-  font-size:max(8px,2vw);
+  font-size:max(8px,1.8vw);
   bottom:0;
   width:100%;
 }
@@ -348,8 +346,8 @@ p.promo{
 }
 .wifi{
 /*     border: solid green; */
-    top:10vw;
-    margin-left:37%;
+    top:2vw;
+    margin-left:35%;
 }
 .bluetooth{  
 /*     border: solid green; */
@@ -365,32 +363,32 @@ p.promo{
 }
 .flash-light{
 /*     border: solid green; */
-    top:22%;
-    margin-left:2vw;
+    top:13%;
+    margin-left:31%;
 }
 .cpu{
 /*     border: solid green; */
-    top:31%;
+    top:24%;
     margin-left:2vw;
 }
 .gpu{
 /*     border: solid green; */
-    top:54%;
+    top:49%;
     margin-left:2vw;
 }
 .ram{
 /*     border: solid green; */
-    top:63%;
+    top:60%;
     margin-left:2vw;
 }
 .storage{
 /*     border: solid green; */
-    top:72%;
+    top:70%;
     margin-left:2vw;
 }
 .special-features{
 /*     border: solid green; */
-    top:83%;
+    top:82%;
     margin-left:2vw;
 }
 .charging-port{
@@ -401,28 +399,28 @@ p.promo{
 }
 .audio-jack{
 /*     border: solid green; */
-    top:80%;
+    top:87%;
     margin-left:65%;
 }
 .battery{
 /*     border: solid green; */
-    top:72%;
-    margin-left:70%;
+    top:77%;
+    margin-left:73%;
 }
 .os{
 /*     border: solid green; */
-    top:60%;
-    margin-left:70%;
+    top:67%;
+    margin-left:73%;
 }
 .display{
 /*     border: solid green; */
-    top:30%;
-    margin-left:70%;
+    top:34%;
+    margin-left:73%;
 }
 .network{
 /*     border: solid green; */
-    top:16%;
-    margin-left:70%;
+    top:19%;
+    margin-left:73%;
 }
 
 }/* END:  phone screens */
