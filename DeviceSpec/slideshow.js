@@ -82,7 +82,7 @@ function setBgColor(image) {
     var r = document.querySelector(':root');
     r.style.setProperty('--info-color', 'white');
     r.style.setProperty('--icon-background-color', `rgb(${color.join(',')})` );
-    document.querySelectorAll(".label-block .icon").forEach(icon=>icon.style.backgroundImage = icon.style.backgroundImage.replace("Black","white"));    
+    document.querySelectorAll(".label-block .icon").forEach(icon=>icon.style.backgroundImage = icon.style.backgroundImage.replace("Black","White"));    
   }
 };//END:setBgColor()
 // set info text in 1st and 2nd slide images
