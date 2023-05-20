@@ -6,7 +6,7 @@
 /*   border:solid red 1px; */
   position:absolute;
   top: auto;
-  bottom: max(-4vw,-4%);
+  bottom: -3%;
   width: 100%;
   height: auto;
   cursor:pointer;
