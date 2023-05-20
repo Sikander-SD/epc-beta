@@ -311,7 +311,7 @@ function showSlideDots(container) {
     slidelist.forEach((_,i)=>{i+=1
         const dot = document.createElement('li');        
         const attrs = {"class":"u-active-custom-color-4 u-palette-3-light-1 u-shape-circle",
-                       "style":"width: 12px; height: 12px;",
+                       // "style":"width: 12px; height: 12px;",
                        "data-u-slide-to":i,
                        "onclick":"showSlide(this.getAttribute('data-u-slide-to')-1)"
         }

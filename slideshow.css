@@ -3,12 +3,18 @@
   margin:1%;
 }
 .u-block-67a6-2 { /* dots */
+/*   border:solid red 1px; */
   position:absolute;
   top: auto;
-  bottom: -3%;
-  width: auto;
+  bottom: max(-4vw,-4%);
+  width: 100%;
   height: auto;
   cursor:pointer;
+}
+.u-block-67a6-2 *{ /* all dots */
+/*   border:solid red 1px; */
+  width:12px !important;
+  height:12px !important;
 }
 .u-block-67a6-3,
 .u-block-67a6-4{ /* prev & next button */
