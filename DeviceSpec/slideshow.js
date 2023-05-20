@@ -87,8 +87,8 @@ function setBgColor(image) {
 };//END:setBgColor()
 // set info text in 1st and 2nd slide images
 function setInfo(l) {
-  const data = {"camera-back":getReso(device_DATA["camera rear"],device_DATA["rear image"]).replaceAll("|","<br>").replaceAll(/:|wide|ultra[- ]?wide|depth|micro|[mM]acro|Video|[0-9]{2,4}[/]/gm,"").replaceAll(" MP","MP")
-                ,"camera-front":getReso(device_DATA["camera front"],device_DATA["front image"]).replaceAll("|","<br>").replaceAll(/:|wide|ultra[- ]?wide|depth|micro|[mM]acro|Video|[0-9]{2,4}[/]/gm,"").replaceAll(" MP","MP")
+  const data = {"camera-back":getReso(device_DATA["camera rear"],device_DATA["rear image"]).replaceAll("|","<br>").replaceAll(/:|([uU]ltra)?[- ]?[wW]ide|[dD]epth|[Mm]icro|[mM]acro|[Vv]ideo|[0-9]{2,4}[/]/gm,"").replaceAll(" MP","MP")
+                ,"camera-front":getReso(device_DATA["camera front"],device_DATA["front image"]).replaceAll("|","<br>").replaceAll(/:|([uU]ltra)?[- ]?[wW]ide|[dD]epth|[Mm]icro|[mM]acro|[Vv]ideo|[0-9]{2,4}[/]/gm,"").replaceAll(" MP","MP")
                 ,"wifi":device_DATA.wifi.match(/v(.*)/gm)
                 ,"bluetooth":"v"+device_DATA.bluetooth
                 ,"nfc":""
