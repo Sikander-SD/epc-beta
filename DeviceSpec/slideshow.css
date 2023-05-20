@@ -6,6 +6,10 @@
 [class*="u-section-2-"] .u-sheet-1{/*slides*/
   border: solid rgb(223 0 0);
 }
+.u-block-67a6-2 { /* dots */
+/*   border:solid red 1px; */
+  bottom: max(-4vw,-4%);
+}
 /* ----------------------------------slide 1 and slide 2------------------------------ */
 .slide-image-1,
 .slide-image-2{ 
