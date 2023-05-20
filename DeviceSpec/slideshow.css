@@ -277,7 +277,7 @@ p.promo{
 .u-block-67a6-3,
 .u-block-67a6-4{display:none !important;}
 /* download image end *****************/
-@media only screen and (width <= 800px){
+/* @media only screen and (width <= 800px){ */
 [class*="u-section-2-"] .u-sheet-1 { /* slides */
   border: solid green;
 }
