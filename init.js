@@ -21,7 +21,7 @@ function init(){
     renderProducts()
     // social media links
     const social_links = {
-        "facebook":null,
+        "facebook":"https://www.facebook.com/100087793316866/",
         "twitter":null,
         "instagram":"https://www.instagram.com/elite.phones.club",
         "linkedin":null,
