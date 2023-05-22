@@ -1,0 +1,33 @@
+body,h1 {font-family: "Raleway", sans-serif}
+
+body, html {height: 100%}
+
+.bgimg {
+  background-image: url('https://www.w3schools.com/w3images/forestbridge.jpg');
+  min-height: 100%;
+  background-position: center;
+  background-size: cover;
+  padding:10% 0;
+}
+
+.center{
+/*   border:solid red; */
+  color:white;    
+}
+.center .text{
+  text-align:center;
+}
+.center p{  
+  text-align:center;
+  border-top:solid;
+  margin:auto;
+  width:40%;
+ }
+
+
+/* phone screens */
+@media only screen and (width <= 800px){
+  .bgimg {
+  padding:15rem 3rem;
+}
+}/*END: phone screens */
