@@ -5,7 +5,7 @@ function init(){
     $("a.u-logo").attr("href","../index.html")
     // Navigation Tabs links
     $("a.nav-home").attr("href","../index.html")
-    $("a.nav-compare").attr("href","#")
+    $("a.nav-compare").removeAttr("href")
     $("a.nav-contact").attr("href","../Contact/contact.html")
     $("a.nav-about").attr("href","../About/about.html")
     $("a.nav-feedback").attr("href","../Feedback/feedback.html")
